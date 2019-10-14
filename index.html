@@ -10,19 +10,54 @@
     <link rel="stylesheet" href="styles/fontawesome/css/all.css">
 </head>
 <body>
-    <div class="cover"></div>
+    <!-- <div class="cover"></div> -->
 <header>
     <h2> Food Bay </h2>
     <div class="header-right">
-            <h4 class="login"><i class="fa fa-user"></i><a href="#">Login</a></h4>
+        <h4 class="register">
+            <i class="fa fa-registered"></i>
+            <a href="pages/register.html">Register</a>
+        </h4>
+            <h4 class="login"><i class="fa fa-user"></i><a href="#" data-toggle="modal" data-target="#myLogin">Login</a></h4>
     </div>
        
 </header>
+<!-- login form -->
+<div id="myLogin" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                    <h2 class="modal_title">Login Form</h2>
+                <p class="close" data-dismiss="modal">&times;</p><br>
+                <!-- <p class="modal_title">Update a food</p> -->
+                </div>
+                <!-- modal body -->
+                <div class="modal-body">
+                    <!-- hello this modal body -->
+                    <form>
+                       <label for=""> Email:</label>
+                        <input type="email" id="email" class="form-control">
+                        <label for="">Password:</label>
+                        <input type="password" id="pass" class="form-control">
+                        <br>
+                        <button type="submit" class="log btn btn-info" data-dismiss="modal"> <i class="fa fa-arrow-alt-circle-right">Login</i> </button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button class="btn btn-info" data-dismiss="modal"> Update & Close </button> -->
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+
     <i class="fa fa-bars toggle"></i>
 
     <div class="side-menu">
 <i class="fa fa-times"></i>
-<div class="heading">
+<div class="heading">  
     <h1>FOOD BAY</h1>
 </div>
 
@@ -32,7 +67,7 @@
            <h3> <a href="#">Home</a></h3>
         </li>
         <li>
-                <h3> <a href="#">Register</a></h3>
+                <h3> <a href="pages/register.html">Register</a></h3>
         </li>
         <li><h3><a href="#">Our Services</a></h3></li>
         <li><h3><a href="#">Enquiry</a></h3></li>
@@ -53,6 +88,48 @@
           $('.side-menu').removeClass('show');
           $('.toggle').removeClass('hide-bars');
       });
+      
+      $('.join').on('click',function(){
+        const fname = $('#fname').val();
+      const lname = $('#lname').val();
+      const uemail =$('#uemail').val();
+      const ulocation = $('#ulocation').val();
+      const uphone = $('#uphone').val();
+      const upass = $('#upass').val();
+      const ucpass = $('#ucpass').val();
+      if(upass === ucpass){
+          $.ajax({
+                     url:"http://localhost:3000/users?uemail="+uemail,
+                     success:function(result){
+                         if(result.length){
+                           return  alert("user already exist");
+                         }else{
+                            $.ajax({
+                    url:"http://localhost:3000/users",success:function(result){console.log(result)},
+                    method:"POST",
+                    data:{
+                        fname,
+                        lname,
+                        uemail,
+                        ulocation,
+                        uphone,
+                        upass,
+                        ucpass,
+                        "isAdmin":false
+                    },
+                });
+                    window.location = '/pages/login.html';    
+                     }
+                     },
+                     method:"GET"
+                 });
+                //clear all fields
+                $('#fname').val("");
+            $('#lname').val("");
+            $('#mobile').val("");
+            $('#email').val("");
+      }
+      })
     })
     </script>
 </body>

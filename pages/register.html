@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Food Bay</title>
+    <link rel="stylesheet" href="../styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/fontawesome/css/all.css">
+    <style>
+        body{
+            background-color: rgb(213, 225, 233);
+        }
+    .wrapper{
+        background: linear-gradient(45deg,rgba(22, 65, 22, 0.826),rgba(145, 255, 71, 0.89),rgba(0, 128, 0, 0.657));
+        width: 50%;
+        margin-right: 25%;
+        margin-left: 25%;
+        padding:8%;
+        box-sizing: border-box;
+        border-radius: 30%;
+        margin-top: 2.5%;
+        height: 84vh;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        border:4px solid #fff;
+        box-shadow: 0px 10px 30px #000; 
+    }
+label{
+    color: #fff;
+    text-shadow:0 0 10px #000
+}
+header{
+    text-shadow: 0 0 15px rgb(0, 0, 0);
+}
+    </style>
+</head>
+<body>
+    <!-- <div class="cover"></div> -->
+<header>
+    <h2> Food Bay </h2>
+       ;
+</header>
+
+    <!-- Registration form -->
+    <div class="wrapper">
+                    <form id="rform">
+                        <label for="">First Name: </label>
+                        <input type="text" id="fname" class="form-control"  required>
+                            <label for=""> Last Name: </label>
+                        <input type="text" id="lname" class="form-control" required>
+                        <label for="">Email Address:</label>
+                        <input type="text" id="uemail" class="form-control" required>
+                        <label for=""> Location:</label>
+                        <input type="text" id="ulocation" class="form-control" required>
+                        <label for=""> Phone Number:</label>
+                        <input type="text" id="uphone" class="form-control" required>
+                        <label for=""> Password:</label>
+                        <input type="password" id="upass" class="form-control" required>
+                        <label for=""> Confirm Password:</label>
+                        <input type="password" id="ucpass" class="form-control" required>
+                        
+                        <button type="submit" class="join btn btn-info" style="margin-top: 10px" data-dismiss="modal"> <i class="fa fa-user-plus"></i> Save Information</button>
+                    </form>
+                </div>
+
+    <script src="../scripts/jquery.js"></script>
+    <script src="../scripts/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      
+      $('.join').on('click',function(e){
+          e.preventDefault();
+         console.log('hi')
+        const fname = $('#fname').val();
+      const lname = $('#lname').val();
+      const uemail =$('#uemail').val();
+      const ulocation = $('#ulocation').val();
+      const uphone = $('#uphone').val();
+      const upass = $('#upass').val();
+      const ucpass = $('#ucpass').val();
+      if(upass === ucpass){
+          if(uemail !== ""){
+
+          
+          $.ajax({
+                     url:"http://localhost:3000/users?uemail="+uemail,
+                     success:function(result){
+                         if(result.length){
+                           return  alert("user already exist");
+                         }else{
+                            $.ajax({
+                    url:"http://localhost:3000/users",success:function(result){console.log(result)},
+                    method:"POST",
+                    data:{
+                        fname,
+                        lname,
+                        uemail,
+                        ulocation,
+                        uphone,
+                        upass,
+                        "isAdmin":false
+                    },
+                });
+                    window.location ='../index.html';    
+                     }
+                     },
+                     method:"GET"
+                 });
+                }else{
+                    alert('Email cannot be empty')
+                }
+      }else{
+          alert('password mismatched')
+      }
+      })
+    })
+    </script>
+</body>
+</html>
