@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background:url("../images/food-bg.jpg") rgba(17, 17, 17, 0.418) no-repeat right top;
+    background:url("../images/food-bg.jpg")  no-repeat right top;
     background-size: 100%;
 }
 .cover{
@@ -86,7 +86,6 @@ transition: all 0.3s ease-in-out;
     border-radius: 20px;
 }
 header{
-position: relative;
 z-index:600;
 color: #fff;
 background:linear-gradient(45deg,rgba(0, 128, 0, 0.99),rgba(255, 255, 255, 0.287),rgba(0, 128, 0, 0.99)) ;
@@ -107,10 +106,33 @@ height: 4em;
 color: #fff;
 text-decoration: none;
 }
+.header-right .login{
+    float: left;
+}
 header h2{
     float: left;
     margin-left: 20px;
     border-bottom: 9px solid #fff;
     border-top: 1px solid #fff;
     box-sizing: border-box;
+}
+.header-right .register a{
+    color: #fff;
+    text-decoration: none;
+}
+.header-right .register{
+    float: left;
+    margin: 0 10px;
+}
+#myModal{
+    position: absolute;
+    z-index: 2000;
+    width: 60%;
+    margin-top: 0px;
+    margin-left: 20%;
+}
+#myLogin{
+    width:50%;
+    margin-left: 25%;
+    overflow: hidden;
 }

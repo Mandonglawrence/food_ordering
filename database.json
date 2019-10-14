@@ -1,13 +1,45 @@
 {
-    "users":[
-    {"id":1}
-],
-"foods":[
+  "users": [
     {
-        "id":1
+      "id": 1,
+      "fname": "Lawrence",
+      "lname": "Mandong",
+      "uemail": "  mandonglawrence@gmail.com",
+      "ulocation": "No.26 Garden Avenue GRA Opp. Bridge Water Hotel Enugu",
+      "uPhone": "08064344075",
+      "upass": "near333",
+      "isAdmin": "true"
+    },
+    {
+      "fname": "Luka",
+      "lname": "Johnson",
+      "uemail": "lukejay@gmail.com",
+      "ulocation": "obalende under bridge",
+      "uphone": "080666722828",
+      "upass": "joy",
+      "ucpass": "joy",
+      "isAdmin": "false",
+      "id": 2
+    },
+    {
+      "fname": "Kings",
+      "lname": "Bobby",
+      "uemail": "kingb@gmail.com",
+      "ulocation": "25 Adesola Street, VI, Lagos",
+      "uphone": "081466433773",
+      "upass": "jet4",
+      "isAdmin": "false",
+      "id": 3
     }
-],
-"orders":[
-    {"id":1}
-]
+  ],
+  "foods": [
+    {
+      "id": 1
+    }
+  ],
+  "orders": [
+    {
+      "id": 1
+    }
+  ]
 }
