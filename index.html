@@ -4,9 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Food Bay</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/fontawesome/css/all.css">
 </head>
 <body>
-    
+    <div class="cover"></div>
+<header>
+    <h2> Food Bay </h2>
+    <div class="header-right">
+            <h4 class="login"><i class="fa fa-user"></i><a href="#">Login</a></h4>
+    </div>
+       
+</header>
+    <i class="fa fa-bars toggle"></i>
+
+    <div class="side-menu">
+<i class="fa fa-times"></i>
+<div class="heading">
+    <h1>FOOD BAY</h1>
+</div>
+
+<div class="list">
+    <ul>
+        <li>
+           <h3> <a href="#">Home</a></h3>
+        </li>
+        <li>
+                <h3> <a href="#">Register</a></h3>
+        </li>
+        <li><h3><a href="#">Our Services</a></h3></li>
+        <li><h3><a href="#">Enquiry</a></h3></li>
+    </ul>
+</div>
+    </div>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        //listen to click bars
+      $('.fa-bars').on('click',function(){
+          $('.side-menu').addClass('show');
+          $('.toggle').addClass('hide-bars');
+      });
+      //listen to click on close button
+      $('.fa-times').on('click',function(){
+          $('.side-menu').removeClass('show');
+          $('.toggle').removeClass('hide-bars');
+      });
+    })
+    </script>
 </body>
 </html>
