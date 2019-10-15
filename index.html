@@ -89,48 +89,64 @@
           $('.toggle').removeClass('hide-bars');
       });
       
-      $('.join').on('click',function(){
-        const fname = $('#fname').val();
-      const lname = $('#lname').val();
-      const uemail =$('#uemail').val();
-      const ulocation = $('#ulocation').val();
-      const uphone = $('#uphone').val();
-      const upass = $('#upass').val();
-      const ucpass = $('#ucpass').val();
-      if(upass === ucpass){
-          $.ajax({
+      $('.log').on('click',function(){
+        
+      const uemail =$('#email').val();
+      const upass = $('#pass').val();
+      $.ajax({
                      url:"http://localhost:3000/users?uemail="+uemail,
                      success:function(result){
                          if(result.length){
-                           return  alert("user already exist");
+                          const [user] = result;
+                          //console.log(user)
+                          if(user.upass === upass){
+                              window.location = "/pages/user_loggedin.html"
+                          }else if(user.upass !== upass){
+                              if(upass ===""){
+                                $("body").append(`<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%">
+                                    Password cannot be empty.
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                    <span aria-hidden="true">&times</span>
+                                    </button>
+                                    </div>
+                              `)
+                              }else{
+                                $("body").append(`<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%">
+                                    Wrong password entered.
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                    <span aria-hidden="true">&times</span>
+                                    </button>
+                                    </div>
+                              `)
+                              }
+                              
+                          }
                          }else{
-                            $.ajax({
-                    url:"http://localhost:3000/users",success:function(result){console.log(result)},
-                    method:"POST",
-                    data:{
-                        fname,
-                        lname,
-                        uemail,
-                        ulocation,
-                        uphone,
-                        upass,
-                        ucpass,
-                        "isAdmin":false
-                    },
-                });
-                    window.location = '/pages/login.html';    
-                     }
-                     },
+                             if(uemail===""){
+                                $("body").append(`<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%">
+                                    Email cannot be empty.
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                    <span aria-hidden="true">&times</span>
+                                    </button>
+                                    </div>
+                              `)
+                             }else{
+                            $("body").append(`<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%">
+                                    User with ${uemail} does not exist, click on register to create your profile.
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                    <span aria-hidden="true">&times</span>
+                                    </button>
+                                    </div>
+                              `)
+                                }
+                         }
+                },
                      method:"GET"
                  });
-                //clear all fields
-                $('#fname').val("");
-            $('#lname').val("");
-            $('#mobile').val("");
-            $('#email').val("");
-      }
       })
-    })
+         
+    
+    }) 
     </script>
 </body>
 </html>
