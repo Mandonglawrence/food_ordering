@@ -42,7 +42,7 @@ header{
     <h2> Food Bay </h2>
        ;
 </header>
-
+<div class="flash"></div>
     <!-- Registration form -->
     <div class="wrapper">
                     <form id="rform">
@@ -80,7 +80,7 @@ header{
       const uphone = $('#uphone').val();
       const upass = $('#upass').val();
       const ucpass = $('#ucpass').val();
-      if(upass === ucpass){
+      if(upass === ucpass && upass!=="" && ucpass!==""){
           if(uemail !== ""){
 
           
@@ -88,7 +88,14 @@ header{
                      url:"http://localhost:3000/users?uemail="+uemail,
                      success:function(result){
                          if(result.length){
-                           return  alert("user already exist");
+                            $("header").append(`<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%">
+                                    User already exist. Please choose a different email and try again.
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                    <span aria-hidden="true">&times</span>
+                                    </button>
+                                    </div>
+                              `)
+                          // return  alert("user already exist");
                          }else{
                             $.ajax({
                     url:"http://localhost:3000/users",success:function(result){console.log(result)},
@@ -100,19 +107,49 @@ header{
                         ulocation,
                         uphone,
                         upass,
-                        "isAdmin":false
+                        "isAdmin":"false"
                     },
                 });
-                    window.location ='../index.html';    
+                   /// window.location ='../index.html';    
+                   $("header").append(`<div class="alert alert-success alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%;margin-top:0;">
+                                    Profile created successfully!
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                    <span aria-hidden="true">&times</span>
+                                    </button>
+                                    </div>
+                              `)
                      }
                      },
                      method:"GET"
                  });
-                }else{
-                    alert('Email cannot be empty')
+                }else if(uemail==="" || ulocation==="" || fname==="" || lname==="" === "" || uphone==="" || upass==="" || ucpass===""){
+                    $("header").append(`<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%;margin-top:0;">
+                                    Form field(s) cannot be empty.
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                    <span aria-hidden="true">&times</span>
+                                    </button>
+                                    </div>
+                              `)
+                   // alert('Email cannot be empty')
                 }
       }else{
-          alert('password mismatched')
+          if(upass==="" || ucpass===""){
+            $("header").append(`<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%">
+                                    Form field(s) cannot be empty.
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                    <span aria-hidden="true">&times</span>
+                                    </button>
+                                    </div>
+                              `)
+          }else{
+        $("header").append(`<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%">
+                                    Password mismatched!.
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                    <span aria-hidden="true">&times</span>
+                                    </button>
+                                    </div>
+                              `)
+                            }
       }
       })
     })

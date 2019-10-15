@@ -30,6 +30,36 @@
       "upass": "jet4",
       "isAdmin": "false",
       "id": 3
+    },
+    {
+      "fname": "Kings",
+      "lname": "Johnson",
+      "uemail": "king@gmail.com",
+      "ulocation": "25 Adesola Street, VI, Lagos",
+      "uphone": "081466433773",
+      "upass": "jet5",
+      "isAdmin": "false",
+      "id": 4
+    },
+    {
+      "fname": "Kings",
+      "lname": "Johnson",
+      "uemail": "kingjay@gmail.com",
+      "ulocation": "25 Adesola Street, VI, Lagos",
+      "uphone": "081466433773",
+      "upass": "jet6",
+      "isAdmin": "false",
+      "id": 5
+    },
+    {
+      "fname": "Kings",
+      "lname": "Johnson",
+      "uemail": "kingjay4@gmail.com",
+      "ulocation": "25 Adesola Street, VI, Lagos",
+      "uphone": "081466433773",
+      "upass": "jet5",
+      "isAdmin": "false",
+      "id": 6
     }
   ],
   "foods": [
