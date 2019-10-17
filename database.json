@@ -4,7 +4,7 @@
       "id": 1,
       "fname": "Lawrence",
       "lname": "Mandong",
-      "uemail": "  mandonglawrence@gmail.com",
+      "uemail": "mandonglawrence@gmail.com",
       "ulocation": "No.26 Garden Avenue GRA Opp. Bridge Water Hotel Enugu",
       "uPhone": "08064344075",
       "upass": "near333",
@@ -60,16 +60,121 @@
       "upass": "jet5",
       "isAdmin": "false",
       "id": 6
+    },
+    {
+      "fname": "Kings",
+      "lname": "Bobby",
+      "uemail": "lukejay5@gmail.com",
+      "ulocation": "25 Adesola Street, VI, Lagos",
+      "uphone": "081466433773",
+      "upass": "tedx",
+      "isAdmin": "false",
+      "id": 7
+    },
+    {
+      "fname": "Ruth Ene",
+      "lname": "Janet",
+      "uemail": "ruthjanetsule@gmail.com",
+      "ulocation": "Enugu",
+      "uphone": "0160941924",
+      "upass": "love",
+      "isAdmin": "false",
+      "id": 8
+    },
+    {
+      "fname": "Ruth Ene",
+      "lname": "Janet",
+      "uemail": "ruthjanete@gmail.com",
+      "ulocation": "Enugu",
+      "uphone": "0160941924",
+      "upass": "nkem",
+      "isAdmin": "false",
+      "id": 9
+    },
+    {
+      "fname": "jona",
+      "lname": "tobby",
+      "uemail": "jonatob@gmail.com",
+      "ulocation": "Abraka, Bayelsa state",
+      "uphone": "08067526263",
+      "upass": "tob",
+      "isAdmin": "false",
+      "id": 10
+    },
+    {
+      "fname": "ginika",
+      "lname": "chukwu",
+      "uemail": "gini@gmail.com",
+      "ulocation": "No. 26 garden avenue, GRA Opp. Bridge Water Hotel Enugu",
+      "uphone": "98933222",
+      "upass": "gini",
+      "isAdmin": "false",
+      "id": 11
     }
   ],
   "foods": [
     {
+      "fname": "fufu",
+      "origin": "Nigerian",
+      "ingredient": "Fermented casava",
+      "price": "NGN 3,000",
+      "flocation": "South-Eastern states and Lagos.",
+      "creatorEmail": "mandoanglawrence@gmail.com",
+      "imgUrl": "../images/fufu.png",
       "id": 1
+    },
+    {
+      "fname": "Ghanian Jollof rice",
+      "origin": "Ghanian",
+      "ingredient": "rice,red oil,kitchen glory, chicken",
+      "price": "NGN 5,000",
+      "flocation": "All over Nigeria",
+      "creatorEmail": "mandoanglawrence@gmail.com",
+      "imgUrl": "../images/jollof.png",
+      "id": 2
+    },
+    {
+      "fname": "Cocoa swallow",
+      "origin": "Nigerian",
+      "ingredient": "Fermented casava",
+      "price": "NGN 3,000",
+      "flocation": "South-Eastern states and Lagos.",
+      "creatorEmail": "mandoanglawrence@gmail.com",
+      "imgUrl": "../images/fufu.png",
+      "id": 3
+    },
+    {
+      "fname": "Ofe onigbo",
+      "origin": "Nigerian",
+      "ingredient": "Fermented casava",
+      "price": "NGN 3,000",
+      "flocation": "South-Eastern states and Lagos.",
+      "creatorEmail": "mandoanglawrence@gmail.com",
+      "imgUrl": "../images/fufu.png",
+      "id": 4
+    },
+    {
+      "fname": "Towo masara ",
+      "origin": "Nigerian",
+      "ingredient": "corn flour",
+      "price": "NGN 3,000",
+      "flocation": "South-Eastern states and Lagos.",
+      "creatorEmail": "mandoanglawrence@gmail.com",
+      "imgUrl": "../images/fufu.png",
+      "id": 5
+    },
+    {
+      "fname": "mian kuka",
+      "origin": "Nigerian",
+      "ingredient": "Fermented casava",
+      "price": "NGN 3,000",
+      "flocation": "South-Eastern states and Lagos.",
+      "creatorEmail": "mandoanglawrence@gmail.com",
+      "imgUrl": "../images/fufu.png",
+      "id": 6
     }
   ],
   "orders": [
-    {
-      "id": 1
-    }
+    {}
   ]
 }

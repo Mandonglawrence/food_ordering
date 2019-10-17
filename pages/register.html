@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Food Bay</title>
+    <title>Food Bay -> Sign up</title>
     <link rel="stylesheet" href="../styles/bootstrap.min.css">
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/fontawesome/css/all.css">
     <style>
         body{
             background-color: rgb(213, 225, 233);
@@ -24,7 +24,7 @@
         height: 84vh;
         padding-top: 15px;
         padding-bottom: 5px;
-        border:4px solid #fff;
+        border:4px solid rgba(255, 99, 71, 0.452);
         box-shadow: 0px 10px 30px #000; 
     }
 label{
@@ -33,6 +33,7 @@ label{
 }
 header{
     text-shadow: 0 0 15px rgb(0, 0, 0);
+    border-bottom: 4px solid rgb(255, 99, 71);
 }
     </style>
 </head>
@@ -73,13 +74,13 @@ header{
       $('.join').on('click',function(e){
           e.preventDefault();
          console.log('hi')
-        const fname = $('#fname').val();
-      const lname = $('#lname').val();
-      const uemail =$('#uemail').val();
+        const fname = $('#fname').val().toLowerCase();
+      const lname = $('#lname').val().toLowerCase();
+      const uemail =$('#uemail').val().toLowerCase();
       const ulocation = $('#ulocation').val();
-      const uphone = $('#uphone').val();
-      const upass = $('#upass').val();
-      const ucpass = $('#ucpass').val();
+      const uphone = $('#uphone').val().toLowerCase();
+      const upass = $('#upass').val().toLowerCase();
+      const ucpass = $('#ucpass').val().toLowerCase();
       if(upass === ucpass && upass!=="" && ucpass!==""){
           if(uemail !== ""){
 
@@ -110,7 +111,7 @@ header{
                         "isAdmin":"false"
                     },
                 });
-                   /// window.location ='../index.html';    
+                   window.location ='../index.html';    
                    $("header").append(`<div class="alert alert-success alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%;margin-top:0;">
                                     Profile created successfully!
                                     <button type="button" class="close" data-dismiss="alert" aria-label="close">
