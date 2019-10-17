@@ -6,17 +6,96 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>User Dash Board</title>
     <link rel="stylesheet" href="../styles/bootstrap.min.css">
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/fontawesome/css/all.css">
-    
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/fontawesome/css/all.css">
+    <style>
+    .logout{
+        cursor: pointer;
+    }
+    header{
+        border-bottom: 4px solid tomato;
+        position: fixed;
+        width: 100vw;
+    }
+    .action-bar{
+        margin-top: 62px;
+        position: fixed;
+        width: 180px;
+        height: 100vh;
+        border-right: 4px solid tomato;
+        background: linear-gradient(30deg,rgba(0, 128, 0, 0.911),rgba(0, 0, 255, 0.849));
+        
+    }
+    .action-bar .header a{
+        color: #fff;
+        text-decoration: none;
+    }
+    .action-bar .header{
+        border-bottom: #fff8 solid 4px;
+        text-align: center;
+        padding-top: 15px;
+    }
+    .action-bar .header:hover{
+        background-color: #0008;
+        transition: all 0.3s ease-in-out;
+    }
+    .list ul li{
+        color: #fff;
+        cursor: pointer;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+    .list ul li .fa{
+        transition: all 0.3s ease-in-out;
+        padding-right: 5px;
+    }
+    .list ul{
+margin-right: 10px;
+padding-left: 10px;
+display: block;
+margin-top: 1em;
+text-align: left;
+    }
+    .list ul li:hover{
+        color: #fff;
+        cursor: pointer;
+        margin-bottom: 10px;
+        padding-left:10px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+    .list{
+        margin-top: 30px
+    }
+    </style>
 </head>
 <body>
         <header>
                 <h2> Food Bay </h2>
-            </header>
-            
-        <script src="scripts/jquery.js"></script>
-        <script src="scripts/bootstrap.min.js"></script>
+                <div class="right" style="float: right;text-align:center;margin-right: 30px">
+                <a href="../index.html" style="color: #fff">
+                    <i class="fa fa-arrow-circle-left logout" style="float: left;font-size:25px;margin:17px 0px 15px 0;"></i>
+                    <h4 class="logout" style="float: right;font-size: 25px;font-weight:5em;margin:12px 30px 15px 0;">Log out</h4>
+                </a>
+            </div>
+            </header>   
+            <div class="action-bar">
+                <div class="header">
+                    <a href="#">
+                        <h2><i class="fa fa-user-circle"></i><p>User</p></h2>
+                    </a>
+                </div>
+                <div class="list">
+                    <ul>
+                            <li><i class="fa fa-eye"></i>Food Created by me</li>
+                        <li><i class="fa fa-eye"></i>All Food</li>
+                        <li><i class="fa fa-eye"></i>My Orders</li>
+                        <li><i class="fa fa-eye"></i>Create Food</li>
+                    </ul>
+                </div>
+            </div>
+        <script src="../scripts/jquery.js"></script>
+        <script src="../scripts/bootstrap.min.js"></script>
         <script></script>    
 </body>
 </html>

@@ -80,10 +80,10 @@ transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 .list ul li:hover{
-    background: #0002;
-    text-align: center;
-    margin-right: 10px;
+    background: #0008;
     border-radius: 20px;
+    padding: 6px;
+    transition: all 0.3s ease-in-out;
 }
 header{
 z-index:600;
