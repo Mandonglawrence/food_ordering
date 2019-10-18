@@ -85,7 +85,22 @@ text-align: left;
     margin-left: 180px;
     transition: all 0.3s ease-in-out;
 }
-
+.food-by-me{
+    margin-top:70px;
+        background: green;
+        /* margin-left: 180px; */
+        margin-left:180px ;
+        cursor: pointer;
+        position: absolute;
+        width: auto;
+        width: 280px;
+        height: auto;
+        padding:15px;
+        color: #fff;
+        border-radius: 10px 10px 10px 10px;
+        transition: all 0.5s ease-in-out;
+    
+}
     </style>
 </head>
 <body>
@@ -101,7 +116,10 @@ text-align: left;
             <div class="action-bar">
                     <div class="header">
                         <a href="#">
-                            <h2><i class="fa fa-user-circle"></i><p>Admin</p></h2>
+                            <h2 id="header-item">
+                                <i class="fa fa-user-circle"></i>
+                                <p>Admin</p>
+                            </h2>
                         </a>
                     </div>
                     <div class="list">
@@ -136,11 +154,18 @@ text-align: left;
                  </form>
                          
                 </div>
+                <!-- view food by me -->
+                <div class="food-by-me">
+
+                </div>
         <script src="../scripts/jquery.js"></script>
         <script src="../scripts/bootstrap.min.js"></script>
         <script>
         $(document).ready(function(){
-            alert(sessionStorage.first_name)
+            //alert(sessionStorage.first_name)
+            $('#header-item').append(`
+            <p>${sessionStorage.first_name}</p>
+            `)
             $('#create-food').on('click',function(){
                 $('.create-food').addClass('show-item');
                
@@ -241,6 +266,28 @@ text-align: left;
                 }
                 
             });
+            // food created by me
+            $('#food-by-me').on('click',function(){
+                $.ajax({
+                    url:`http://localhost:3000/foods?creatoremail=${sessionStorage.user_email}`,
+                    success:function(result){
+                        if(result.length){
+                            // const [data]=result;
+                            console.log(result)
+                            result.forEach(food=>{
+                                name = food.fname.toUpperCase()
+                                $('.food-by-me').append(`
+                            <p>${food.fname.toUpperCase()}</p>
+                            `)
+                            });
+                            
+                        }else{
+                            alert('oops')
+                        }
+                    },
+                    method:"GET"
+                })
+             });//end of food by me
         });
         </script>    
 </body>
