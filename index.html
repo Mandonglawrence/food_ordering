@@ -135,6 +135,14 @@
                      `)
                     }
                   
+                }else{
+                    $("body").append(`<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:40%;margin-left:35%">
+                User with email ${uemail} does not exist,click on register to create a new account using ${uemail}.
+                <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                <span aria-hidden="true">&times</span>
+                </button>
+                </div>
+                     `)
                 }
             },
             method:"GET"
