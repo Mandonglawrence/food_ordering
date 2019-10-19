@@ -118,11 +118,13 @@
                             sessionStorage.first_name=data.fname;
                             sessionStorage.last_name=data.lname;
                             sessionStorage.user_email=data.uemail;
+                            sessionStorage.isAdmin=data.isAdmin;
                             window.location ="pages/admin.html";
                         }else if(data.isAdmin ==="false"){
                             sessionStorage.first_name=data.fname;
                             sessionStorage.last_name=data.lname;
                             sessionStorage.user_email=data.uemail;
+                            sessionStorage.isAdmin=data.isAdmin;
                             window.location ="pages/user_loggedin.html";
                         }
                     }else{
@@ -150,75 +152,6 @@
        }
       })//end of click listener on login button
          
-    //   const uemail =$('#email').val().toLowerCase();
-    //   const upass = $('#pass').val().toLowerCase();
-    /*
-      $.ajax({
-                     url:"http://localhost:3000/users?uemail="+uemail.toLowerCase(),
-                     success:function(result){
-                         if(result.length){
-                          const [user] = result;
-                          //console.log(user)
-                          if(user.upass === upass){
-                              if(user.isAdmin ==="false"){
-                                   sessionStorage.first_name = user.fname;
-                                   sessionStorage.user_email = user.uemail;
-                                window.location = "pages/user_loggedin.html";
-                                  
-                              }else if(user.isAdmin ==="true"){
-                                  if(user.isAdmin ==="false"){
-                                   sessionStorage.first_name = user.fname;
-                                   sessionStorage.user_email = user.uemail;
-                                  window.location = "pages/admin.html";
-                                
-                              }
-                              
-                          }else if(user.upass !== upass){
-                              if(upass ===""){
-                                $("body").append(`<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%">
-                                    Password cannot be empty.
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                                    <span aria-hidden="true">&times</span>
-                                    </button>
-                                    </div>
-                              `)
-                              }else{
-                                $("body").append(`<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%">
-                                    Wrong password entered.
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                                    <span aria-hidden="true">&times</span>
-                                    </button>
-                                    </div>
-                              `)
-                              }
-                              
-                          }
-                         }else{
-                             if(uemail===""){
-                                $("body").append(`<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%">
-                                    Email cannot be empty.
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                                    <span aria-hidden="true">&times</span>
-                                    </button>
-                                    </div>
-                              `)
-                             }else{
-                            $("body").append(`<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%">
-                                    User with ${uemail} does not exist, click on register to create your profile.
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                                    <span aria-hidden="true">&times</span>
-                                    </button>
-                                    </div>
-                              `)
-                                }
-                            }
-                         }
-                         },
-                     method:"GET"
-                 });
-      })
-       */  
-    
     }) 
     </script>
 </body>

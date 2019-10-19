@@ -119,7 +119,7 @@
       "ingredient": "Fermented casava",
       "price": "NGN 3,000",
       "flocation": "South-Eastern states and Lagos.",
-      "creatorEmail": "mandoanglawrence@gmail.com",
+      "creatoremail": "mandonglawrence@gmail.com",
       "imgUrl": "../images/fufu.jpg",
       "id": 1
     },
@@ -129,7 +129,7 @@
       "ingredient": "rice,red oil,kitchen glory, chicken",
       "price": "NGN 5,000",
       "flocation": "All over Nigeria",
-      "creatorEmail": "mandoanglawrence@gmail.com",
+      "creatoremail": "mandonglawrence@gmail.com",
       "imgUrl": "../images/eba.jpeg",
       "id": 2
     },
@@ -139,7 +139,7 @@
       "ingredient": "Fermented casava",
       "price": "NGN 3,000",
       "flocation": "South-Eastern states and Lagos.",
-      "creatorEmail": "mandoanglawrence@gmail.com",
+      "creatoremail": "mandonglawrence@gmail.com",
       "imgUrl": "../images/amala.jpg",
       "id": 3
     },
@@ -149,7 +149,7 @@
       "ingredient": "Fermented casava",
       "price": "NGN 3,000",
       "flocation": "South-Eastern states and Lagos.",
-      "creatorEmail": "mandoanglawrence@gmail.com",
+      "creatoremail": "mandonglawrence@gmail.com",
       "imgUrl": "../images/fufu.png",
       "id": 4
     },
@@ -159,7 +159,7 @@
       "ingredient": "corn flour",
       "price": "NGN 3,000",
       "flocation": "South-Eastern states and Lagos.",
-      "creatorEmail": "mandoanglawrence@gmail.com",
+      "creatoremail": "mandonglawrence@gmail.com",
       "imgUrl": "../images/fufu.png",
       "id": 5
     },
@@ -169,7 +169,7 @@
       "ingredient": "Fermented casava",
       "price": "NGN 3,000",
       "flocation": "South-Eastern states and Lagos.",
-      "creatorEmail": "mandoanglawrence@gmail.com",
+      "creatoremail": "mandonglawrence@gmail.com",
       "imgUrl": "../images/fufu.png",
       "id": 6
     },
@@ -179,7 +179,7 @@
       "ingredient": "melon seed",
       "price": "NGN 3,000",
       "flocation": "South-Eastern states and Lagos.",
-      "creatorEmail": "mandoanglawrence@gmail.com",
+      "creatoremail": "mandonglawrence@gmail.com",
       "imgUrl": "../images/fufu.png",
       "id": 7
     },
@@ -189,9 +189,29 @@
       "ingredient": "Fermented casava",
       "price": "NGN 3,000",
       "flocation": "South-Eastern states and Lagos.",
-      "creatorEmail": "mandoanglawrence@gmail.com",
+      "creatoremail": "mandonglawrence@gmail.com",
       "imgUrl": "../images/fufu.png",
       "id": 8
+    },
+    {
+      "fname": "fufu cass",
+      "origin": "Nigerian",
+      "ingredient": "Fermented casava",
+      "price": "NGN 3,000",
+      "flocation": "South-Eastern states and Lagos.",
+      "creatoremail": "mandonglawrence@gmail.com",
+      "imgUrl": "../images/fufu.png",
+      "id": 9
+    },
+    {
+      "fname": "fufu jeep",
+      "origin": "Nigerian",
+      "ingredient": "Fermented casava",
+      "price": "NGN 3,000",
+      "flocation": "South-Eastern states and Lagos.",
+      "creatoremail": "gini@gmail.com",
+      "imgUrl": "../images/fufu.png",
+      "id": 10
     }
   ],
   "orders": [
