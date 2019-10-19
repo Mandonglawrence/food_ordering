@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/fontawesome/css/all.css">
     <style>
+        body{
+           background-image: url("../images/appetizer.jpg");
+           background-repeat: no-repeat;
+           background-attachment: fixed;
+        }
     .logout{
         cursor: pointer;
     }
@@ -81,25 +86,154 @@ text-align: left;
         border-radius: 10px 10px 10px 10px;
         transition: all 0.5s ease-in-out;
     }
-    .show-item{
-    margin-left: 180px;
-    transition: all 0.3s ease-in-out;
-}
+   
 .food-by-me{
     margin-top:70px;
-        background: green;
+        background:#0009;
         /* margin-left: 180px; */
-        margin-left:180px ;
-        cursor: pointer;
+        margin-left:-250% ;
         position: absolute;
-        width: auto;
-        width: 280px;
+        /* width: auto; */
+        width: 840px;
+        /* width: auto; */
+        /* display: none; */
         height: auto;
         padding:15px;
         color: #fff;
         border-radius: 10px 10px 10px 10px;
         transition: all 0.5s ease-in-out;
     
+}
+.all-food{
+    margin-top:70px;
+        background:#0009;
+        /* margin-left: 180px; */
+        margin-left:-250% ;
+        position: absolute;
+        /* width: auto; */
+        width: 840px;
+        /* width: auto; */
+        /* display: none; */
+        height: auto;
+        padding:15px;
+        color: #fff;
+        border-radius: 10px 10px 10px 10px;
+        transition: all 0.5s ease-in-out;
+}
+.all-foodlist{
+    float: left;
+    height: auto;
+    padding: 2px;
+    background: #fff;
+    color: black;
+    margin: 6px 0 6px 0;
+    width:300px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left:10px;
+}
+.all-foodlist img{
+    width: 120px;
+    border-radius: 10px;
+    border: rgba(0, 132, 255, 0.863) solid 3px;
+    margin-bottom: 4px;
+}
+.my-food{
+    float: left;
+    height: auto;
+    padding: 2px;
+    background: #fff;
+    color: black;
+    margin: 6px 0 6px 0;
+    width:300px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left:10px;
+
+}
+.my-food img{
+    width: 120px;
+    border-radius: 10px;
+    border: rgba(0, 132, 255, 0.863) solid 3px;
+    margin-bottom: 4px;
+}
+.bg-cancel:hover{
+    background: rgb(68, 68, 223);
+    margin-bottom: 0;
+    transition: all 0.3s ease-in-out;
+}
+.bg-cancel{
+    width: 100px;
+    height:50px;
+    background:red;
+    margin-bottom: 0;
+    border-radius:50%;
+    width: 75px;
+    text-align: center;
+    float:left;
+    margin-right: 4em;
+    padding-top: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.allfood-cancel:hover{
+    background: rgb(68, 68, 223);
+    margin-bottom: 0;
+    transition: all 0.3s ease-in-out;
+}
+.allfood-cancel{
+    width: 100px;
+    height:50px;
+    background:red;
+    margin-bottom: 0;
+    border-radius:50%;
+    width: 75px;
+    text-align: center;
+    float:left;
+    margin-right: 4em;
+    padding-top: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+#top-heade{
+    /* display: none; */
+    height:50px;
+    border-radius:50% 8px 8px 50%;
+    position: fixed;
+    width: auto;
+    /* width:810px; */
+    background: black;
+}
+#top-heade a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 0.8em;
+    margin-right: 4em;
+}
+#allfood-topheader{
+    height:50px;
+    border-radius:50% 8px 8px 50%;
+    position: fixed;
+    width: auto;
+    /* width:810px; */
+    background: black;
+}
+#allfood-topheader a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 0.8em;
+    margin-right: 4em;
+}
+.show-item{
+    margin-left: 180px;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+.show-my-food-header{
+    /* margin-left: 40%; */
+    transition: all 0.3s ease-in-out;
 }
     </style>
 </head>
@@ -156,8 +290,27 @@ text-align: left;
                 </div>
                 <!-- view food by me -->
                 <div class="food-by-me">
-
-                </div>
+                    <div id="top-heade">
+                        <a href="">Food Created by Me</a>
+                         <h6 class="bg-cancel">
+                            <i class="fa fa-times-circle" style="padding-right: 5px;"></i>
+                            Close
+                        </h6>
+                    </div>
+                 </div>
+                
+                 <!-- view all food -->
+                 <div class="all-food">
+                    <div id="allfood-topheader">
+                        <a href="">All Food</a>
+                         <h6 class="allfood-cancel">
+                            <i class="fa fa-times-circle" style="padding-right: 5px;"></i>
+                            Close
+                        </h6>
+                    </div>
+                 </div>
+                
+                        
         <script src="../scripts/jquery.js"></script>
         <script src="../scripts/bootstrap.min.js"></script>
         <script>
@@ -168,10 +321,14 @@ text-align: left;
             `)
             $('#create-food').on('click',function(){
                 $('.create-food').addClass('show-item');
+                $('.food-by-me').removeClass('show-item');
+                $('.all-food').removeClass('show-item');
+                $('.my-food').remove();
+                $('.all-foodlist').remove();
                
             })
             $('.cancel').on('click',function(){
-                $('.create-food').removeClass('show-item');
+                $('.create-food' ).removeClass('show-item');
             });
             $('.save-food').on('click',function(e){
                // e.preventDefault();
@@ -268,16 +425,40 @@ text-align: left;
             });
             // food created by me
             $('#food-by-me').on('click',function(){
+                $('#top-heade').addClass('show-my-food-header');
+                $('.create-food' ).removeClass('show-item');
+                $('.all-food').removeClass('show-item');
+                $('.all-foodlist').remove();
+                $('.my-food').remove();
+               
+               
                 $.ajax({
-                    url:`http://localhost:3000/foods?creatoremail=${sessionStorage.user_email}`,
+                    url:`http://localhost:3000/foods`,
                     success:function(result){
                         if(result.length){
                             // const [data]=result;
-                            console.log(result)
+                            console.log(result)  
                             result.forEach(food=>{
-                                name = food.fname.toUpperCase()
+                                //name = food.fname.toUpperCase()
                                 $('.food-by-me').append(`
-                            <p>${food.fname.toUpperCase()}</p>
+                            <li class="my-food" style="margin-bottom:8px;list-style:none;margin-top:70px">
+                            <h6 style="background:tomato;color:#fff;margin-top:0px;border-radius:15px">${food.fname.toUpperCase()}</h6>
+                            <img src=${food.imgUrl}>
+                            <div class="info" style="background:#0008;border-radius:15px;color:#fff;margin-top:10px">
+                            <article style="text-align:left;padding:5px;">
+                            Ingredient: ${food.ingredient}
+                            </article>
+                            <article style="text-align:left;padding:5px">
+                            Price: ${food.price}
+                            </article>
+                            <article style="text-align:left;padding:5px">
+                            Delivery Location(s): ${food.flocation}
+                            </article>
+                            <article style="text-align:left;padding:5px">
+                            Origin: ${food.origin}
+                            </article>
+                            </div>
+                            </li>
                             `)
                             });
                             
@@ -287,7 +468,66 @@ text-align: left;
                     },
                     method:"GET"
                 })
+                $('.food-by-me').addClass('show-item');
              });//end of food by me
+             //close food by me
+             $('.bg-cancel').on('click',function(){
+                $('.food-by-me').removeClass('show-item');
+                $('.my-food').remove();
+             })
+            
+                        // All food
+                        $('#all-food').on('click',function(){
+                $('#allfood-topheader').addClass('show-my-food-header');
+                $('.create-food' ).removeClass('show-item');
+                $('.food-by-me').removeClass('show-item');
+                $('.all-foodlist').remove();
+                $('.create-food' ).removeClass('show-item');
+               
+               
+                $.ajax({
+                    url:`http://localhost:3000/foods?creatoremail=${sessionStorage.user_email}`,
+                    success:function(result){
+                        if(result.length){
+                            // const [data]=result;
+                            console.log(result)  
+                            result.forEach(food=>{
+                                //name = food.fname.toUpperCase()
+                                $('.all-food').append(`
+                            <li class="all-foodlist" style="margin-bottom:8px;list-style:none;margin-top:70px">
+                            <h6 style="background:tomato;color:#fff;margin-top:0px;border-radius:15px">${food.fname.toUpperCase()}</h6>
+                            <img src=${food.imgUrl}>
+                            <div class="info" style="background:#0008;border-radius:15px;color:#fff;margin-top:10px">
+                            <article style="text-align:left;padding:5px;">
+                            Ingredient: ${food.ingredient}
+                            </article>
+                            <article style="text-align:left;padding:5px">
+                            Price: ${food.price}
+                            </article>
+                            <article style="text-align:left;padding:5px">
+                            Delivery Location(s): ${food.flocation}
+                            </article>
+                            <article style="text-align:left;padding:5px">
+                            Origin: ${food.origin}
+                            </article>
+                            </div>
+                            </li>
+                            `)
+                            });
+                            
+                        }else{
+                            alert('oops')
+                        }
+                    },
+                    method:"GET"
+                })
+                $('.all-food').addClass('show-item');
+             });//end of All food
+             //close all food 
+             $('.allfood-cancel').on('click',function(){
+                $('.all-food').removeClass('show-item');
+                $('.all-foodlist').remove();
+             })
         });
         </script>    
 </body>
