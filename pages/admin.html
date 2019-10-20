@@ -120,6 +120,22 @@ text-align: left;
         border-radius: 10px 10px 10px 10px;
         transition: all 0.5s ease-in-out;
 }
+.all-users{
+    margin-top:70px;
+        background:#0009;
+        /* margin-left: 180px; */
+        margin-left:-250% ;
+        position: absolute;
+        /* width: auto; */
+        width: 840px;
+        /* width: auto; */
+        /* display: none; */
+        height: auto;
+        padding:15px;
+        color: #fff;
+        border-radius: 10px 10px 10px 10px;
+        transition: all 0.5s ease-in-out;
+}
 .all-foodlist{
     float: left;
     height: auto;
@@ -137,6 +153,18 @@ text-align: left;
     border-radius: 10px;
     border: rgba(0, 132, 255, 0.863) solid 3px;
     margin-bottom: 4px;
+}
+.all-userslist{
+    float: left;
+    height: auto;
+    padding: 2px;
+    background: #fff;
+    color: black;
+    margin: 6px 0 6px 0;
+    width:250px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left:10px;
 }
 .my-food{
     float: left;
@@ -195,6 +223,25 @@ text-align: left;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
+.allusers-cancel:hover{
+    background: rgb(68, 68, 223);
+    margin-bottom: 0;
+    transition: all 0.3s ease-in-out;
+}
+.allusers-cancel{
+    width: 100px;
+    height:50px;
+    background:red;
+    margin-bottom: 0;
+    border-radius:50%;
+    width: 75px;
+    text-align: center;
+    float:left;
+    margin-right: 4em;
+    padding-top: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
 #top-heade{
     /* display: none; */
     height:50px;
@@ -225,6 +272,27 @@ text-align: left;
     display: inline-block;
     padding-top: 0.8em;
     margin-right: 4em;
+}
+#allusers-topheader{
+    height:50px;
+    border-radius:50% 8px 8px 50%;
+    position: fixed;
+    width: auto;
+    /* width:810px; */
+    background: black;
+}
+#allusers-topheader a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 0.8em;
+    margin-right: 4em;
+}
+.allfood-button a{
+color: #fff;
+padding:5px;
+border-radius: 10px;
+text-decoration: none;
 }
 .show-item{
     margin-left: 180px;
@@ -309,22 +377,44 @@ text-align: left;
                         </h6>
                     </div>
                  </div>
-                
+                <!-- All users view -->
+                <div class="all-users">
+                    <div id="allusers-topheader">
+                        <a href="">All Users</a>
+                         <h6 class="allusers-cancel">
+                            <i class="fa fa-times-circle" style="padding-right: 5px;"></i>
+                            Close
+                        </h6>
+                    </div>
+                 </div>
                         
         <script src="../scripts/jquery.js"></script>
         <script src="../scripts/bootstrap.min.js"></script>
         <script>
         $(document).ready(function(){
-            //alert(sessionStorage.first_name)
+            //alert(sessionStorage.first_name
+            //clear session storage
+            $('.logout').on('click',function(){
+                Object.keys(sessionStorage).forEach(key=>{
+                    sessionStorage.removeItem(key);
+                })
+            })
+            if(sessionStorage.isAdmin==='true'){
+
+           
             $('#header-item').append(`
             <p>${sessionStorage.first_name}</p>
             `)
+
+            //create food
             $('#create-food').on('click',function(){
                 $('.create-food').addClass('show-item');
                 $('.food-by-me').removeClass('show-item');
-                $('.all-food').removeClass('show-item');
                 $('.my-food').remove();
+                $('.all-food').removeClass('show-item');
                 $('.all-foodlist').remove();
+                $('.all-users').removeClass('show-item');
+                $('.all-userslist').remove();
                
             })
             $('.cancel').on('click',function(){
@@ -422,7 +512,9 @@ text-align: left;
                 });
                 }
                 
-            });
+            });//end of create food
+
+
             // food created by me
             $('#food-by-me').on('click',function(){
                 $('#top-heade').addClass('show-my-food-header');
@@ -430,10 +522,12 @@ text-align: left;
                 $('.all-food').removeClass('show-item');
                 $('.all-foodlist').remove();
                 $('.my-food').remove();
+                $('.all-users').removeClass('show-item');
+                $('.all-userslist').remove();
                
                
                 $.ajax({
-                    url:`http://localhost:3000/foods`,
+                    url:`http://localhost:3000/foods?creatoremail=${sessionStorage.user_email}`,
                     success:function(result){
                         if(result.length){
                             // const [data]=result;
@@ -463,7 +557,7 @@ text-align: left;
                             });
                             
                         }else{
-                            alert('oops')
+                            alert('oops! Nothing to')
                         }
                     },
                     method:"GET"
@@ -483,10 +577,12 @@ text-align: left;
                 $('.food-by-me').removeClass('show-item');
                 $('.all-foodlist').remove();
                 $('.create-food' ).removeClass('show-item');
+                $('.all-users').removeClass('show-item');
+                $('.all-userslist').remove();
                
                
                 $.ajax({
-                    url:`http://localhost:3000/foods?creatoremail=${sessionStorage.user_email}`,
+                    url:`http://localhost:3000/foods`,
                     success:function(result){
                         if(result.length){
                             // const [data]=result;
@@ -510,6 +606,11 @@ text-align: left;
                             <article style="text-align:left;padding:5px">
                             Origin: ${food.origin}
                             </article>
+                            <article class="allfood-button" style="text-align:left;padding:5px">
+                            <a href="" class="bg-info">Order</a>
+                            <a href="" class="bg-info">Edit</a>
+                            <a href="" class="bg-info">Delete</a>
+                            </article>
                             </div>
                             </li>
                             `)
@@ -523,11 +624,67 @@ text-align: left;
                 })
                 $('.all-food').addClass('show-item');
              });//end of All food
+
              //close all food 
              $('.allfood-cancel').on('click',function(){
                 $('.all-food').removeClass('show-item');
                 $('.all-foodlist').remove();
              })
+
+            //  all users view
+            $('#view-users').on('click',function(){
+                
+                // alert('hmm')
+                $('#allusers-topheader').addClass('show-my-food-header');
+                $('.create-food' ).removeClass('show-item');
+                $('.food-by-me').removeClass('show-item');
+                $('.all-userslist').remove();
+                $('.create-food' ).removeClass('show-item');
+                $('.all-food').removeClass('show-item');
+                $('.all-foodlist').remove();
+                $.ajax({
+                    url:"http://localhost:3000/users",
+                    success:function(users){
+                        if(users.length){
+                          // alert('on track')
+                     
+                           users.forEach(user=>{
+                            $('.all-users').append(`
+                            <li class="all-userslist" style="margin-bottom:8px;list-style:none;margin-top:70px">
+                            <h6 style="background:tomato;color:#fff;margin-top:0px;border-radius:15px">
+                            ${user.fname.toUpperCase()} ${user.lname.toUpperCase()}</h6>
+                            <img src="">
+                            <div class="info" style="background:#0008;border-radius:15px;color:#fff;margin-top:10px">
+                            <article style="text-align:left;padding:5px;">
+                            Address: ${user.ulocation}
+                            </article>
+                            <article style="text-align:left;padding:5px">
+                            Phone: ${user.uphone}
+                            </article>
+                            <article style="text-align:left;padding:5px">
+                            Email Address: ${user.uemail}
+                            </article>
+                            
+                            </div>
+                            
+                            </li>
+                            `)
+                           })
+                           
+                          
+                        }
+                    },
+                    method:"GET"
+                })//end of ajax get request to users table
+                $('.all-users').addClass('show-item');
+            })//end of click listener on all users button
+
+            // close all users view
+            $('.allusers-cancel').on('click',function(){
+                $('.all-users').removeClass('show-item');
+                $('.all-userslist').remove();
+             })
+            }
         });
         </script>    
 </body>
