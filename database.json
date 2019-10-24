@@ -137,18 +137,20 @@
       "fname": "Cocoa swallow",
       "origin": "Nigerian-African(Yoruba)",
       "ingredient": "Fermented casava",
-      "price": "3000",
+      "price": "10000",
       "flocation": "South-Eastern states and Lagos.",
       "imgUrl": "../images/eba.jpeg",
+      "creatoremail": "gini@gmail.com",
       "id": 2
     },
     {
       "fname": "Cocoa swallow",
       "origin": "Nigerian",
       "ingredient": "Fermented casava",
-      "price": "NGN 3,000",
+      "price": "3000",
       "flocation": "South-Eastern states and Lagos.",
       "imgUrl": "../images/amala.jpg",
+      "creatoremail": "gini@gmail.com",
       "id": 3
     },
     {
@@ -204,6 +206,61 @@
       "price": "NGN 5,000",
       "flocation": "All over Nigeria",
       "id": 12
+    },
+    {
+      "fname": "African salad",
+      "origin": "Nigerian",
+      "ingredient": "slide cassava, pepper, onion, ogeri, red oil, salt, smoke fish, cray fish and ukpaka.",
+      "price": "500",
+      "flocation": "No. 38. GRA Enugu",
+      "creatorEmail": "Ruthsule60@gmail.com",
+      "imgUrl": "Nil.com",
+      "id": 13
+    },
+    {
+      "fname": "fufu ju",
+      "origin": "Nigerian",
+      "ingredient": "Fermented casava",
+      "price": "3000",
+      "flocation": "South-Eastern states and Lagos.",
+      "creatoremail": "gini@gmail.com",
+      "imgUrl": "../images/fufu.png",
+      "id": 14
+    },
+    {
+      "fname": "egusi soup",
+      "origin": "Nigerian",
+      "ingredient": "Fermented casava",
+      "price": "200",
+      "flocation": "South-Eastern states and Lagos.",
+      "creatoremail": "gini@gmail.com",
+      "imgUrl": "../images/fufu.jpg",
+      "id": 15
+    },
+    {
+      "fname": "Ayaraya",
+      "restname": "Ejindu cook",
+      "origin": "Nigerian",
+      "ingredient": "Grounded corn, dry fish, ugu, palm oil,",
+      "price": "250",
+      "flocation": "Cps Enugu",
+      "restaddress": "No.10 Coal camp street, off first bank road Enugu.",
+      "creatoremail": "Ruthsulejanet@gmail.com",
+      "imgUrl": "Nil.com",
+      "id": 16
+    },
+    {
+      "fname": "lettuce",
+      "restname": "ejindu foods",
+      "origin": "Nigerian",
+      "ingredient": "lettuce",
+      "price": "300",
+      "flocation": "lagos",
+      "restaddress": "coal camp enugu",
+      "timescope": "Monday - Sunday (9am - 11:30 pm)",
+      "creatoremail": "ruthjanetsule@gmail.com",
+      "imgUrl": "../images/fufu.png",
+      "id": 17
     }
   ],
   "orders": [
@@ -250,6 +307,180 @@
       "deliveryLocation": "cps enugu",
       "userMail": "mandonglawrence@gmail.com",
       "id": 5
+    },
+    {
+      "foodName": "Cocoa swallow",
+      "foodPrice": "NGN 3,000",
+      "totalBill": "NaN",
+      "quantity": "2",
+      "deliveryLocation": "",
+      "userMail": "mandonglawrence@gmail.com",
+      "id": 6
+    },
+    {
+      "foodName": "Cocoa swallow",
+      "foodPrice": "NGN 3,000",
+      "totalBill": "NaN",
+      "quantity": "2",
+      "deliveryLocation": "",
+      "userMail": "mandonglawrence@gmail.com",
+      "id": 7
+    },
+    {
+      "foodName": "Cocoa swallow",
+      "foodPrice": "3000",
+      "totalBill": "6000",
+      "quantity": "2",
+      "deliveryLocation": "",
+      "userMail": "mandonglawrence@gmail.com",
+      "id": 8
+    },
+    {
+      "foodName": "Cocoa swallow",
+      "foodPrice": "3000",
+      "totalBill": "6000",
+      "quantity": "2",
+      "deliveryLocation": "",
+      "userMail": "mandonglawrence@gmail.com",
+      "id": 9
+    },
+    {
+      "foodName": "Cocoa swallow",
+      "foodPrice": "3,000",
+      "totalBill": "NaN",
+      "quantity": "2",
+      "deliveryLocation": "",
+      "userMail": "mandonglawrence@gmail.com",
+      "id": 10
+    },
+    {
+      "foodName": "Cocoa swallow",
+      "foodPrice": "3,000",
+      "totalBill": "NaN",
+      "quantity": "2",
+      "deliveryLocation": "",
+      "userMail": "mandonglawrence@gmail.com",
+      "id": 11
+    },
+    {
+      "foodName": "Cocoa swallow",
+      "foodPrice": "3000",
+      "totalBill": "12000",
+      "quantity": "4",
+      "deliveryLocation": "cps enugu",
+      "userMail": "mandonglawrence@gmail.com",
+      "datetime": "Tue Oct 22 2019 10:11:43 GMT+0100 (West Africa Standard Time)",
+      "id": 12
+    },
+    {
+      "foodName": "Cocoa swallow",
+      "foodPrice": "3000",
+      "totalBill": "12000",
+      "quantity": "4",
+      "deliveryLocation": "cps enugu",
+      "userMail": "mandonglawrence@gmail.com",
+      "datetime": "Tue Oct 22 2019 10:11:44 GMT+0100 (West Africa Standard Time)",
+      "id": 13
+    },
+    {
+      "foodName": "Cocoa swallow",
+      "foodPrice": "3000",
+      "totalBill": "18000",
+      "quantity": "6",
+      "deliveryLocation": "Kano street coal camp",
+      "userMail": "mandonglawrence@gmail.com",
+      "datetime": "Tue Oct 22 2019 10:16:45 GMT+0100 (West Africa Standard Time)",
+      "id": 14
+    },
+    {
+      "foodName": "African salad",
+      "foodPrice": "500",
+      "totalBill": "0",
+      "quantity": "",
+      "deliveryLocation": "No.38 GRA Enugu",
+      "userMail": "mandonglawrence@gmail.com",
+      "datetime": "Tue Oct 22 2019 16:32:59 GMT+0100 (West Africa Standard Time)",
+      "id": 15
+    },
+    {
+      "foodName": "African salad",
+      "foodPrice": "500",
+      "totalBill": "1500",
+      "quantity": "3",
+      "deliveryLocation": "No 38 GRA Enugu",
+      "userMail": "mandonglawrence@gmail.com",
+      "datetime": "Tue Oct 22 2019 16:40:25 GMT+0100 (West Africa Standard Time)",
+      "id": 16
+    },
+    {
+      "foodName": "African salad",
+      "foodPrice": "500",
+      "totalBill": "1500",
+      "quantity": "3",
+      "deliveryLocation": "No 38 GRA Enugu",
+      "userMail": "mandonglawrence@gmail.com",
+      "datetime": "Tue Oct 22 2019 17:16:34 GMT+0100 (West Africa Standard Time)",
+      "id": 17
+    },
+    {
+      "foodName": "Cocoa swallow",
+      "foodPrice": "3000",
+      "totalBill": "24000",
+      "quantity": "8",
+      "deliveryLocation": "cps enugu",
+      "userMail": "ruthjanetsule@gmail.com",
+      "datetime": "Wed Oct 23 2019 07:02:27 GMT+0100 (West Africa Standard Time)",
+      "id": 18
+    },
+    {
+      "foodName": "Cocoa swallow",
+      "foodPrice": "3000",
+      "totalBill": "15000",
+      "quantity": "5",
+      "deliveryLocation": "Campus Three",
+      "userMail": "gini@gmail.com",
+      "datetime": "Thu Oct 24 2019 02:59:53 GMT+0100 (West Africa Standard Time)",
+      "id": 19
+    },
+    {
+      "foodName": "Cocoa swallow",
+      "foodPrice": "3000",
+      "totalBill": "15000",
+      "quantity": "5",
+      "deliveryLocation": "Campus Three",
+      "userMail": "gini@gmail.com",
+      "datetime": "Thu Oct 24 2019 03:00:08 GMT+0100 (West Africa Standard Time)",
+      "id": 20
+    },
+    {
+      "foodName": "Cocoa swallow",
+      "foodPrice": "3000",
+      "totalBill": "9000",
+      "quantity": "3",
+      "deliveryLocation": "Kano street coal camp",
+      "userMail": "gini@gmail.com",
+      "datetime": "Thu Oct 24 2019 03:02:08 GMT+0100 (West Africa Standard Time)",
+      "id": 21
+    },
+    {
+      "foodName": "Cocoa swallow",
+      "foodPrice": "3000",
+      "totalBill": "18000",
+      "quantity": "6",
+      "deliveryLocation": "No 38 GRA Enugu",
+      "userMail": "gini@gmail.com",
+      "datetime": "Thu Oct 24 2019 03:12:33 GMT+0100 (West Africa Standard Time)",
+      "id": 22
+    },
+    {
+      "foodName": "Cocoa swallow",
+      "foodPrice": "10000",
+      "totalBill": "20000",
+      "quantity": "2",
+      "deliveryLocation": "Kano street coal camp",
+      "userMail": "gini@gmail.com",
+      "datetime": "Thu Oct 24 2019 03:15:48 GMT+0100 (West Africa Standard Time)",
+      "id": 23
     }
   ]
 }

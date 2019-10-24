@@ -136,6 +136,22 @@ text-align: left;
         border-radius: 10px 10px 10px 10px;
         transition: all 0.5s ease-in-out;
 }
+.all-orders{
+    margin-top:70px;
+        background:#0009;
+        /* margin-left: 180px; */
+        margin-left:-250% ;
+        position: absolute;
+        /* width: auto; */
+        width: 840px;
+        /* width: auto; */
+        /* display: none; */
+        height: auto;
+        padding:15px;
+        color: #fff;
+        border-radius: 10px 10px 10px 10px;
+        transition: all 0.5s ease-in-out;
+}
 .all-foodlist{
     float: left;
     height: auto;
@@ -185,6 +201,18 @@ text-align: left;
     border: rgba(0, 132, 255, 0.863) solid 3px;
     margin-bottom: 4px;
 }
+.allorders{
+    float: left;
+    height: auto;
+    padding: 2px;
+    background: #fff;
+    color: black;
+    margin: 6px 0 6px 0;
+    width:300px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left:10px;
+}
 .bg-cancel:hover{
     background: rgb(68, 68, 223);
     margin-bottom: 0;
@@ -229,6 +257,25 @@ text-align: left;
     transition: all 0.3s ease-in-out;
 }
 .allusers-cancel{
+    width: 100px;
+    height:50px;
+    background:red;
+    margin-bottom: 0;
+    border-radius:50%;
+    width: 75px;
+    text-align: center;
+    float:left;
+    margin-right: 4em;
+    padding-top: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.allorders-cancel:hover{
+    background: rgb(68, 68, 223);
+    margin-bottom: 0;
+    transition: all 0.3s ease-in-out;
+}
+.allorders-cancel{
     width: 100px;
     height:50px;
     background:red;
@@ -288,6 +335,28 @@ text-align: left;
     padding-top: 0.8em;
     margin-right: 4em;
 }
+#allorders-topheader{
+    height:50px;
+    border-radius:50% 8px 8px 50%;
+    position: fixed;
+    width: auto;
+    /* width:810px; */
+    background: black;
+}
+#allorders-topheader{
+height:50px;
+    border-radius:50% 8px 8px 50%;
+    position: fixed;
+    width: auto;
+    /* width:810px; */
+    background: black;}
+#allorders-topheader p{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 0.8em;
+    margin-right: 4em;
+}
 .allfood-button p{
 color: #fff;
 padding:5px;
@@ -336,10 +405,14 @@ cursor: pointer;
                         </ul>
                     </div>
                 </div>
+
+                <!-- create food form view -->
                 <div class="create-food">
                  <form>
                     <label for=""> Food Name:</label>
                     <input type="text" id="food-name" class="form-control" required>
+                    <label for=""> Restaurant Name:</label>
+                    <input type="text" id="restaurant-name" class="form-control" required>
                     <label for=""> Origin:</label>
                     <input type="text" id="food-origin" class="form-control" required>
                     <label for=""> Ingredients:</label>
@@ -388,6 +461,18 @@ cursor: pointer;
                             Close
                         </h6>
                     </div>
+                 </div>
+
+                 <!-- All orders view -->
+                <div class="all-orders">
+                    <div id="allorders-topheader">
+                        <p>All Orders</p>
+                         <h6 class="allorders-cancel">
+                            <i class="fa fa-times-circle" style="padding-right: 5px;"></i>
+                            Close
+                        </h6>
+                    </div>
+                   
                  </div>
 
         <!-- modal food update form -->
@@ -493,6 +578,9 @@ cursor: pointer;
                 $('.all-foodlist').remove();
                 $('.all-users').removeClass('show-item');
                 $('.all-userslist').remove();
+                $('.allorders').remove();
+                $('.all-orders').removeClass('show-item');
+               
                
             })
             $('.cancel').on('click',function(){
@@ -602,6 +690,9 @@ cursor: pointer;
                 $('.my-food').remove();
                 $('.all-users').removeClass('show-item');
                 $('.all-userslist').remove();
+                $('.allorders').remove();
+                $('.all-orders').removeClass('show-item');
+               
                
                
                 $.ajax({
@@ -648,6 +739,74 @@ cursor: pointer;
                 $('.my-food').remove();
              })
             
+
+            //View all ordered food
+            $('#view-orders').on('click',function(){
+                //$('#top-heade').addClass('show-my-food-header');
+                $('.create-food' ).removeClass('show-item');
+                $('.all-food').removeClass('show-item');
+                $('.all-foodlist').remove();
+                $('.allorders').remove();
+                $('.all-orders').removeClass('show-item');
+                $('.all-users').removeClass('show-item');
+                $('.all-userslist').remove();
+                $('.food-by-me').removeClass('show-item');
+                
+               
+                $.ajax({
+                    url:`http://localhost:3000/orders`,
+                    success:function(result){
+                        if(result.length){
+                            // const [data]=result;
+                            console.log(result)  
+                            result.forEach(order=>{
+                                //name = food.fname.toUpperCase()
+                                //console.log(order)
+                                $('.all-orders').append(`
+                                <li class="allorders" style="margin-bottom:8px;list-style:none;margin-top:70px">
+                                <h6 style="background:tomato;color:#fff;margin-top:0px;border-radius:15px">
+                                ${order.foodName}
+                                </h6>
+                                <div class="info" style="background:#0008;border-radius:15px;color:#fff;margin-top:10px">
+                                    <article style="text-align:left;padding:5px;">
+                                    Price per unit: ${order.foodPrice}
+                                    </article>
+
+                                    <article style="text-align:left;padding:5px">
+                                    Quantity ordered: ${order.quantity}
+                                    </article>
+
+                                    <article style="text-align:left;padding:5px">
+                                    Total bill: ${order.totalBill}
+                                    </article>
+
+                                    <article style="text-align:left;padding:5px">
+                                    Delivery Location: ${order.deliveryLocation}
+                                    </article>
+
+                                    <article style="text-align:left;padding:5px">
+                                    Day and Time: ${order.datetime} 
+                                    </article>
+                                </div>
+                                </li>
+                                `)
+                            
+                            });
+                            
+                        }else{
+                            alert('oops! Nothing to display')
+                        }
+                    },
+                    method:"GET"
+                })
+                $('.all-orders').addClass('show-item');
+             });//end of food ordered
+             //close orders
+             $('.allorders-cancel').on('click',function(){ 
+                $('.all-orders').removeClass('show-item');
+                $('.allorders').remove();
+             })
+            
                         // All food
                         $('#all-food').on('click',function(){
                 $('#allfood-topheader').addClass('show-my-food-header');
@@ -657,6 +816,9 @@ cursor: pointer;
                 $('.create-food' ).removeClass('show-item');
                 $('.all-users').removeClass('show-item');
                 $('.all-userslist').remove();
+                $('.allorders').remove();
+                $('.all-orders').removeClass('show-item');
+               
                
                
                 $.ajax({
@@ -697,7 +859,7 @@ cursor: pointer;
                 //Delete button
                 $('.delete').on('click',function(e){
                // alert(e.target.dataset.id)
-               if(confirm(`Confirm ${e.target.dataset.foodname.toUpperCase()} delete action`)){
+               if(confirm(`Confirm delete action`)){
                 $.ajax({
                    url:"http://localhost:3000/foods/"+e.target.dataset.id,
                    success:function(res){
@@ -738,8 +900,10 @@ cursor: pointer;
                 let price = $('#foodPrice').val();
                 let flocation = $('#foodDelocation').val();
                 let imgUrl = $('#foodImg').val();
+                let creatoremail = sessionStorage.user_email;
 
-            // POST DATA TO FOODS TABLE USING AJAX
+                if(fname!=="" && origin !=="" && ingredient!=="" && price !== "" && flocation !== "" && imgUrl !==""){
+                    // POST DATA TO FOODS TABLE USING AJAX
             $.ajax({
                 url:`http://localhost:3000/foods/${e.target.dataset.id}`,
                 success:function(response){
@@ -751,10 +915,15 @@ cursor: pointer;
                 ingredient,
                 price,
                 flocation,
-                imgUrl
+                imgUrl,
+                creatoremail
                 },
                 method:"PUT"
             })
+                }else{
+                    alert('Form field(s) must not be empty')
+                }
+            
             })
 
             })
@@ -767,6 +936,7 @@ cursor: pointer;
                 let foodName;
                 let foodPrice;
                 let totalBill;
+                let datetime = new Date();
                 $.ajax({
                     url:`http://localhost:3000/foods?id=${e.target.dataset.id}`,
                     success:function(response){
@@ -798,7 +968,8 @@ cursor: pointer;
                             totalBill,
                             quantity,
                             deliveryLocation,
-                            userMail
+                            userMail,
+                            datetime
                             
                         },
                         method:"POST"
@@ -843,6 +1014,9 @@ cursor: pointer;
                 $('.create-food' ).removeClass('show-item');
                 $('.all-food').removeClass('show-item');
                 $('.all-foodlist').remove();
+                $('.allorders').remove();
+                $('.all-orders').removeClass('show-item');
+               
                 $.ajax({
                     url:"http://localhost:3000/users",
                     success:function(users){

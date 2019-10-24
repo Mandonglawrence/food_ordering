@@ -88,7 +88,7 @@ transition: all 0.3s ease-in-out;
 header{
 z-index:600;
 color: #fff;
-background:linear-gradient(45deg,rgba(0, 128, 0, 0.99),rgba(255, 255, 255, 0.287),rgba(0, 128, 0, 0.99)) ;
+background:linear-gradient(45deg,rgba(0, 128, 0, 0.99),rgba(16, 207, 74, 0.932),rgba(0, 128, 0, 0.99)) ;
 height: 4em;
 }
 .fa-user{

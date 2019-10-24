@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/fontawesome/css/all.css">
     <style>
+         body{
+           background-image: url("../images/appetizer.jpg");
+           background-repeat: no-repeat;
+           background-attachment: fixed;
+        }
     .logout{
         cursor: pointer;
     }
@@ -67,6 +72,299 @@ text-align: left;
     .list{
         margin-top: 30px
     }
+    .create-food{
+        margin-top:70px;
+        background: green;
+        /* margin-left: 180px; */
+        margin-left: -100%;
+        cursor: pointer;
+        position: absolute;
+        width: 280px;
+        /* width: -280px; */
+        height: auto;
+        padding:15px;
+        color: #fff;
+        border-radius: 10px 10px 10px 10px;
+        transition: all 0.5s ease-in-out;
+    }
+    /* food created by me */
+    .food-by-me{
+    margin-top:70px;
+        background:#0009;
+        /* margin-left: 180px; */
+        margin-left:-250% ;
+        position: absolute;
+        /* width: auto; */
+        width: 840px;
+        /* width: auto; */
+        /* display: none; */
+        height: auto;
+        padding:15px;
+        color: #fff;
+        border-radius: 10px 10px 10px 10px;
+        transition: all 0.5s ease-in-out;
+    
+}
+.my-food{
+    float: left;
+    height: auto;
+    padding: 2px;
+    background: #fff;
+    color: black;
+    margin: 6px 0 6px 0;
+    width:300px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left:10px;
+
+}
+.my-food img{
+    width: 120px;
+    border-radius: 10px;
+    border: rgba(0, 132, 255, 0.863) solid 3px;
+    margin-bottom: 4px;
+}
+    .bg-cancel:hover{
+    background: rgb(68, 68, 223);
+    margin-bottom: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+    .bg-cancel{
+    width: 100px;
+    height:50px;
+    background:red;
+    margin-bottom: 0;
+    border-radius:50%;
+    width: 75px;
+    text-align: center;
+    float:left;
+    margin-right: 4em;
+    padding-top: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+    #top-heade{
+    /* display: none; */
+    height:50px;
+    border-radius:50% 8px 8px 50%;
+    position: fixed;
+    width: auto;
+    /* width:810px; */
+    background: black;
+}
+#top-heade p{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 0.8em;
+    margin-right: 4em;
+}
+.myfood-button p{
+color: #fff;
+padding:5px;
+border-radius: 10px;
+text-decoration: none;
+display: inline-block;
+cursor: pointer;
+}
+
+
+/* all foods */
+.all-food{
+    margin-top:70px;
+        background:#0009;
+        /* margin-left: 180px; */
+        margin-left:-250% ;
+        position: absolute;
+        /* width: auto; */
+        width: 840px;
+        /* width: auto; */
+        /* display: none; */
+        height: auto;
+        padding:15px;
+        color: #fff;
+        border-radius: 10px 10px 10px 10px;
+        transition: all 0.5s ease-in-out;
+}
+.all-foodlist{
+    float: left;
+    height: auto;
+    padding: 2px;
+    background: #fff;
+    color: black;
+    margin: 6px 0 6px 0;
+    width:300px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left:10px;
+}
+.all-foodlist img{
+    width: 120px;
+    border-radius: 10px;
+    border: rgba(0, 132, 255, 0.863) solid 3px;
+    margin-bottom: 4px;
+}
+.allfood-cancel:hover{
+    background: rgb(68, 68, 223);
+    margin-bottom: 0;
+    transition: all 0.3s ease-in-out;
+}
+.allfood-cancel{
+    width: 100px;
+    height:50px;
+    background:red;
+    margin-bottom: 0;
+    border-radius:50%;
+    width: 75px;
+    text-align: center;
+    float:left;
+    margin-right: 4em;
+    padding-top: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+#allfood-topheader{
+    height:50px;
+    border-radius:50% 8px 8px 50%;
+    position: fixed;
+    width: auto;
+    /* width:810px; */
+    background: black;
+}
+#allfood-topheader p{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 0.8em;
+    margin-right: 4em;
+}
+.allfood-button p{
+color: #fff;
+padding:5px;
+border-radius: 10px;
+text-decoration: none;
+display: inline-block;
+cursor: pointer;
+}
+
+/* my orders */
+.all-orders{
+    margin-top:70px;
+        background:#0009;
+        /* margin-left: 180px; */
+        margin-left:-250% ;
+        position: absolute;
+        /* width: auto; */
+        width: 840px;
+        /* width: auto; */
+        /* display: none; */
+        height: auto;
+        padding:15px;
+        color: #fff;
+        border-radius: 10px 10px 10px 10px;
+        transition: all 0.5s ease-in-out;
+}
+.allorders{
+    float: left;
+    height: auto;
+    padding: 2px;
+    background: #fff;
+    color: black;
+    margin: 6px 0 6px 0;
+    width:300px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left:10px;
+}
+.allorders-cancel:hover{
+    background: rgb(68, 68, 223);
+    margin-bottom: 0;
+    transition: all 0.3s ease-in-out;
+}
+.allorders-cancel{
+    width: 100px;
+    height:50px;
+    background:red;
+    margin-bottom: 0;
+    border-radius:50%;
+    width: 75px;
+    text-align: center;
+    float:left;
+    margin-right: 4em;
+    padding-top: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+#allorders-topheader{
+height:50px;
+    border-radius:50% 8px 8px 50%;
+    position: fixed;
+    width: auto;
+    /* width:810px; */
+    background: black;}
+#allorders-topheader p{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 0.8em;
+    margin-right: 4em;
+}
+.singlefood{
+    margin-top:70px;
+        background:#000;
+        /* margin-left: 180px; */
+        margin-left:-250% ;
+        position: absolute;
+        /* width: auto; */
+        width: 840px;
+        /* width: auto; */
+        /* display: none; */
+        height: 900px;
+        padding:15px;
+        color: #fff;
+        border-radius: 10px 10px 10px 10px;
+        transition: all 0.5s ease-in-out;
+}
+.singlefood-cancel:hover{
+    background: rgb(68, 68, 223);
+    margin-bottom: 0;
+    transition: all 0.3s ease-in-out;
+}
+.singlefood-cancel{
+    width: 100px;
+    height:50px;
+    background:red;
+    margin-bottom: 0;
+    border-radius:50%;
+    width: 75px;
+    text-align: center;
+    float:left;
+    margin-right: 4em;
+    padding-top: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#singlefood-topheader{
+height:50px;
+    border-radius:50% 8px 8px 50%;
+    position: fixed;
+    width: auto;
+    /* width:810px; */
+    background: black;}
+#singlefood-topheader p{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 0.8em;
+    margin-right: 4em;
+}
+    .show-item{
+    margin-left: 180px;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
     </style>
 </head>
 <body>
@@ -82,20 +380,831 @@ text-align: left;
             <div class="action-bar">
                 <div class="header">
                     <a href="#">
-                        <h2><i class="fa fa-user-circle"></i><p>User</p></h2>
+                        <h2 id="header-item">
+                            <i class="fa fa-user-circle"></i><p>User</p>
+                        </h2>
                     </a>
                 </div>
                 <div class="list">
                     <ul>
-                            <li><i class="fa fa-eye"></i>Food Created by me</li>
-                        <li><i class="fa fa-eye"></i>All Food</li>
-                        <li><i class="fa fa-eye"></i>My Orders</li>
-                        <li><i class="fa fa-eye"></i>Create Food</li>
+                            <li id="food-by-me"><i class="fa fa-eye"></i>Food Created by me</li>
+                        <li id="all-food"><i class="fa fa-eye"></i>All Food</li>
+                        <li id="view-orders"><i class="fa fa-eye"></i>My Orders</li>
+                        <li id="create-food"><i class="fa fa-eye"></i>Create Food</li>
                     </ul>
                 </div>
             </div>
+
+            <!-- create food form view  -->
+             <div class="create-food">
+                 <form>
+                    <label for=""> Food Name:</label>
+                    <input type="text" id="food-name" class="form-control" required>
+                    <label for=""> Restaurant Name:</label>
+                    <input type="text" id="restaurant-name" class="form-control" required>
+                    <label for=""> Restaurant Address:</label>
+                    <input type="text" id="restaurant-address" class="form-control" required>
+                    <label for="">Delivery time scope:</label>
+                    <input type="text" id="time-scope" class="form-control" required>
+                    <label for=""> Origin:</label>
+                    <input type="text" id="food-origin" class="form-control" required>
+                    <label for=""> Ingredients:</label>
+                    <input type="text" id="food-ingredient" class="form-control" required>
+                    <label for=""> Price:</label>
+                    <input type="text" id="food-price" class="form-control" required>
+                    <label for=""> Delivery Location(s):</label>
+                    <input type="text" id="delivery-location" class="form-control" required>
+                    <label for="">Food Image Url:</label>
+                    <input type="text" id="food-image-url" class="form-control" required>           
+                    <br>
+                    <input type="button" class="btn btn-info save-food" value="Create Food">
+                    <button type="button" class="btn btn-info cancel"> <i class="fa fa-times-circle" style="padding-right:10px;color:rgb(221, 65, 65)"></i> Cancel</button>
+                 </form>
+                 </div>
+
+                 <!-- view food by me -->
+                <div class="food-by-me">
+                        <div id="top-heade">
+                            <p>Food Created by Me</p>
+                             <h6 class="bg-cancel">
+                                <i class="fa fa-times-circle" style="padding-right: 5px;"></i>
+                                Close
+                            </h6>
+                        </div>
+                     </div>
+
+                      <!-- view all food -->
+                 <div class="all-food">
+                        <div id="allfood-topheader">
+                            <p>All Food</p>
+                             <h6 class="allfood-cancel">
+                                <i class="fa fa-times-circle" style="padding-right: 5px;"></i>
+                                Close
+                            </h6>
+                        </div>
+                     </div>
+
+                      <!-- All orders view -->
+                <div class="all-orders">
+                        <div id="allorders-topheader">
+                            <p>My Order History</p>
+                             <h6 class="allorders-cancel">
+                                <i class="fa fa-times-circle" style="padding-right: 5px;"></i>
+                                Close
+                            </h6>
+                        </div>
+                       
+                     </div>
+
+                      <!-- single food  view -->
+                <div class="singlefood">
+                        <div id="singlefood-topheader">
+                            <p>My Order History</p>
+                             <h6 class="singlefood-cancel">
+                                <i class="fa fa-times-circle" style="padding-right: 5px;"></i>
+                                Close
+                            </h6>
+                        </div>
+                       
+                     </div>
+
+                      <!-- modal food update form -->
+        <div id="myModal" class="modal fade" role="dialog" style="margin-left: 30vw;width:50%;">
+                <div class="modal-dialog">
+                    <!-- modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                                <h2 class="modal_title">Update a food</h2>
+                            <p class="close" data-dismiss="modal">&times;</p><br>
+                            <!-- <p class="modal_title">Update a food</p> -->
+                            </div>
+                            <!-- modal body -->
+                            <div class="modal-body">
+                                <!-- hello this modal body -->
+                                <form>
+                                    
+                                        <label for=""> Food Name:</label>
+                                    <input type="text" id="foodName" class="form-control">
+                                    <label for=""> Restaurant Name:</label>
+                                    <input type="text" id="restName" class="form-control">
+    
+                                    <label for=""> Food Delivery Location:</label>
+                                        <input type="text" id="foodDelocation" class="form-control">
+    
+                                        <label for=""> Food Ingredients:</label>
+                                        <input type="text" id="foodIngredient" class="form-control">
+    
+                                    <label for=""> Food Origin:</label>
+                                    <input type="text" id="foodOrigin" class="form-control">
+    
+                                    <label for=""> Food Image Url:</label>
+                                    <input type="text" id="foodImg" class="form-control">
+    
+                                    <label for=""> Food Price:</label>
+                                    <input type="text" id="foodPrice" class="form-control">
+                                    <br>
+                                    <button type="submit" class="update btn btn-info" data-dismiss="modal"> Update & Close </button>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <!-- <button class="btn btn-info" data-dismiss="modal"> Update & Close </button> -->
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+                <!-- end of update modal form -->
+    
+                <!-- order form modal -->
+                <div id="foodorderModal" class="modal fade" role="dialog" style="margin-top: 10vh;margin-left: 30vw;width:50%;">
+                    <div class="modal-dialog">
+                        <!-- modal content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                    <h2 class="modal_title">Food Order Form</h2>
+                                <p class="close" data-dismiss="modal">&times;</p><br>
+                                <!-- <p class="modal_title">Update a food</p> -->
+                                </div>
+                                <!-- modal body -->
+                                <div class="modal-body">
+                                    <form>
+        
+                                        <label for=""> Food Delivery Location:</label>
+                                            <input type="text" id="deliveryLocation" class="form-control">
+        
+                                            <label for=""> Quantity (Per plate/wrap):</label>
+                                            <input type="number" id="quantity" class="form-control">
+    
+                                        <br>
+                                        <button type="submit" class="placeOrder btn btn-info" data-dismiss="modal">Order & Close </button>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <!-- <button class="btn btn-info" data-dismiss="modal"> Update & Close </button> -->
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
         <script src="../scripts/jquery.js"></script>
         <script src="../scripts/bootstrap.min.js"></script>
-        <script></script>    
+        <script>
+         $(document).ready(function(){
+            //alert(sessionStorage.first_name
+            //clear session storage
+            $('.logout').on('click',function(){
+                Object.keys(sessionStorage).forEach(key=>{
+                    sessionStorage.removeItem(key);
+                })
+            })
+            if(sessionStorage.isAdmin==='false'){
+
+           
+            $('#header-item').append(`
+            <p>${sessionStorage.first_name}</p>
+            `)
+
+            //create food
+            $('#create-food').on('click',function(){
+                $('.create-food').addClass('show-item');
+                $('.food-by-me').removeClass('show-item');
+                $('.my-food').remove();
+                $('.all-food').removeClass('show-item');
+                $('.all-foodlist').remove();
+                $('.all-users').removeClass('show-item');
+                $('.all-userslist').remove();
+                $('.allorders').remove();
+                $('.all-orders').removeClass('show-item');
+               
+               
+            })
+            $('.cancel').on('click',function(){
+                $('.create-food' ).removeClass('show-item');
+            });
+            $('.save-food').on('click',function(e){
+               // e.preventDefault();
+              // $('.create-food').removeClass('show-item');
+                const fname = $('#food-name').val();
+                const restname = $('#restaurant-name').val();
+                const restaddress = $('#restaurant-address').val();
+                const timescope = $('#time-scope').val();
+                const origin = $('#food-origin').val();
+                const ingredient = $('#food-ingredient').val();
+                const price = $('#food-price').val();
+                const flocation = $('#delivery-location').val();
+                const creatoremail = sessionStorage.user_email;
+                const imgUrl = $('#food-image-url').val();
+                 if(fname==="" || origin==="" || ingredient==="" || price==="" || flocation==="" || imgUrl==="" || restname ==="" || timescope===""){
+                            $("body").append(`<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%;margin-top:10vh;position:absolute">
+                                    Form field(s) cannot be empty.
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                    <span aria-hidden="true">&times</span>
+                                    </button>
+                                    </div>
+                              `);
+                        }else{
+                    $.ajax({
+                    url:"http://localhost:3000/foods?fname="+fname,
+                    success:function(result){
+                      if(result.length){
+                        if(fname !==""){
+                            $("body").append(`<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%;margin-top:10vh;position:absolute">
+                                    Food with the name, ${fname} already exists,please choose another name and try again.
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                    <span aria-hidden="true">&times</span>
+                                    </button>
+                                    </div>
+                              `);
+                        }
+                        
+                      }else{
+                         
+                         $.ajax({
+                             url:"http://localhost:3000/foods",
+                             success:function(result){
+                                
+                             },
+                             method:"POST",
+                             data:{
+                                 fname,
+                                 restname,
+                                 origin,
+                                 ingredient,
+                                 price,
+                                 flocation,
+                                 restaddress,
+                                 timescope,
+                                 creatoremail,
+                                 imgUrl
+                             }
+                             
+                         });
+                          $.ajax({
+                              url:"http://localhost:3000/foods?fname"+fname,
+                              success:function(result){
+                                  if(result.length){
+                                       $('.create-food').removeClass('show-item');
+                                    //alert("Food created successfully")
+                                    $("body").append(`<div class="alert alert-success alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%;margin-top:30vh;position:absolute">
+                                    Food created successfully.
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                    <span aria-hidden="true">&times</span>
+                                    </button>
+                                    </div>
+                              `);
+
+                                  }else{
+                                      $("body").append(`<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%;margin-top:10vh;position:absolute">
+                                    Oops! Something went wrong.
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                                    <span aria-hidden="true">&times</span>
+                                    </button>
+                                    </div>
+                              `);
+                                  }
+                              },
+                              method:"GET"
+                          });
+                         $('#food-name').val("");
+                         $('#restaurant-name').val("");
+                         $('#restaurant-address').val("");
+                         $('#food-origin').val("");
+                         $('#food-ingredient').val("");
+                         $('#food-price').val("");
+                         $('#delivery-location').val("");
+                         $('#food-image-url').val("");
+
+                      }
+                    },
+                    method:"GET"
+                });
+                }
+                
+            });//end of create food
+
+
+            // food created by me
+            $('#food-by-me').on('click',function(){
+                $('#top-heade').addClass('show-my-food-header');
+                $('.create-food' ).removeClass('show-item');
+                $('.all-food').removeClass('show-item');
+                $('.all-foodlist').remove();
+                $('.my-food').remove();
+                $('.all-users').removeClass('show-item');
+                $('.all-userslist').remove();
+                $('.allorders').remove();
+                $('.all-orders').removeClass('show-item');
+               
+               
+               
+                $.ajax({
+                    url:`http://localhost:3000/foods?creatoremail=${sessionStorage.user_email}`,
+                    success:function(result){
+                        if(result.length){
+                            // const [data]=result;
+                            console.log(result)  
+                            result.forEach(food=>{
+                                //name = food.fname.toUpperCase()
+                                $('.food-by-me').append(`
+                            <li class="my-food" style="margin-bottom:8px;list-style:none;margin-top:70px">
+                            <h6 style="background:tomato;color:#fff;margin-top:0px;border-radius:15px">${food.fname.toUpperCase()}</h6>
+                            <img src=${food.imgUrl}>
+                            <div class="info" style="background:#0008;border-radius:15px;color:#fff;margin-top:10px">
+                            <article style="text-align:left;padding:5px;">
+                            Ingredient: ${food.ingredient}
+                            </article>
+                            <article style="text-align:left;padding:5px">
+                            Price: ${food.price}
+                            </article>
+                            <article style="text-align:left;padding:5px">
+                            Delivery Location(s): ${food.flocation}
+                            </article>
+                            <article style="text-align:left;padding:5px">
+                            Origin: ${food.origin} 
+                            </article>
+
+                            <article class="myfood-button" style="text-align:left;padding:5px">
+                            <p class="bg-info order" data-id=${food.id} data-toggle="modal" data-target="#foodorderModal">Order</p>
+                            <p class="bg-info edit" data-id=${food.id} data-toggle="modal" data-target="#myModal">Edit</p>
+                            <p class="bg-info delete" data-id=${food.id} data-foodname=${food.fname}>Delete</p>
+                            </article>
+                            </div>
+                            </li>
+                            `)
+                            });
+
+                                         //  All food buttons functions
+                //Delete button
+                $('.delete').on('click',function(e){
+               // alert(e.target.dataset.id)
+               if(confirm(`Confirm ${e.target.dataset.foodname.toUpperCase()} delete action`)){
+                $.ajax({
+                   url:"http://localhost:3000/foods/"+e.target.dataset.id,
+                   success:function(res){
+                       const [afood] = res;
+                      // alert(afood.creatoremail)
+                   },
+                   method:"DELETE"
+               })
+               }
+            })   
+            
+                    //edit button        
+            $('.edit').on('click',function(e){
+                $('.all-food').removeClass('show-item');
+                $('.all-foodlist').remove();
+
+                //get a particular food and populate update form
+                $.ajax({
+                    url:`http://localhost:3000/foods?id=${e.target.dataset.id}`,
+                    success:function(result){
+                        const [data] = result;
+                        $('#foodName').val(data.fname);
+                        $('#foodDelocation').val(data.flocation);
+                        $('#foodIngredient').val(data.ingredient);
+                        $('#foodOrigin').val(data.origin);
+                        $('#foodImg').val(data.imgUrl);
+                        $('#foodPrice').val(data.price);
+                        
+                    },
+                    method:"GET"
+                })//end of get call
+
+                //handle update button click
+            $('.update').on('click',function(){
+                let fname = $('#foodName').val();
+                let origin = $('#foodOrigin').val();
+                let ingredient = $('#foodIngredient').val();
+                let price = $('#foodPrice').val();
+                let flocation = $('#foodDelocation').val();
+                let imgUrl = $('#foodImg').val();
+                let creatoremail = sessionStorage.user_email;
+
+                if(fname!=="" && origin !=="" && ingredient!=="" && price !== "" && flocation !== "" && imgUrl !==""){
+                    // POST DATA TO FOODS TABLE USING AJAX
+            $.ajax({
+                url:`http://localhost:3000/foods/${e.target.dataset.id}`,
+                success:function(response){
+
+                },
+                data:{
+                fname,
+                origin,
+                ingredient,
+                price,
+                flocation,
+                imgUrl,
+                creatoremail
+                },
+                method:"PUT"
+            })
+                }else{
+                    alert('Form field(s) must not be empty')
+                }
+
+            
+            })
+
+            })
+                
+            
+            
+                //order button
+            $('.order').on('click',function(e){
+                //alert(e.target.dataset.id)
+                let foodName;
+                let foodPrice;
+                let totalBill;
+                let datetime = new Date();
+                $.ajax({
+                    url:`http://localhost:3000/foods?id=${e.target.dataset.id}`,
+                    success:function(response){
+                        const [singlefood] = response;
+                       foodName = singlefood.fname;
+                       foodPrice = singlefood.price;
+                    },
+                    method:"GET"
+                })
+
+                $('.placeOrder').on('click',function(){
+
+                    let userMail = sessionStorage.user_email;
+                    let deliveryLocation = $('#deliveryLocation').val();
+                    let quantity = $('#quantity').val();
+
+                    if(deliveryLocation !=="" || quantity >=1){
+                        
+                        totalBill = parseInt(foodPrice)*quantity;
+                    
+                    $.ajax({
+                        url:`http://localhost:3000/orders`,
+                        success:function(data){
+
+                        },
+                        data:{
+                            foodName,
+                            foodPrice,
+                            totalBill,
+                            quantity,
+                            deliveryLocation,
+                            userMail,
+                            datetime
+                            
+                        },
+                        method:"POST"
+                    })
+                    
+                    }else{
+
+                        alert("Could not capture order")
+                    }
+                    
+                })
+                $('#deliveryLocation').val("");
+                    $('#quantity').val("");
+
+            }) //end of button clicks
+                            
+                        }else{
+                            alert('oops! Nothing to display')
+                        }
+                    },
+                    method:"GET"
+                })
+                $('.food-by-me').addClass('show-item');
+             });//end of food by me
+             //close food by me
+             $('.bg-cancel').on('click',function(){ 
+                $('.food-by-me').removeClass('show-item');
+                $('.my-food').remove();
+             })
+            
+
+            //View all ordered food
+            $('#view-orders').on('click',function(){
+                //$('#top-heade').addClass('show-my-food-header');
+                $('.create-food' ).removeClass('show-item');
+                $('.all-food').removeClass('show-item');
+                $('.all-foodlist').remove();
+                $('.allorders').remove();
+                $('.all-orders').removeClass('show-item');
+                $('.all-users').removeClass('show-item');
+                $('.all-userslist').remove();
+                $('.food-by-me').removeClass('show-item');
+                
+               
+                $.ajax({
+                    url:`http://localhost:3000/orders?userMail=`+sessionStorage.user_email,
+                    success:function(result){
+                        if(result.length){
+                            // const [data]=result;
+                            console.log(result)  
+                            result.forEach(order=>{
+                                //name = food.fname.toUpperCase()
+                                //console.log(order)
+                                $('.all-orders').append(`
+                                <li class="allorders" style="margin-bottom:8px;list-style:none;margin-top:70px">
+                                <h6 style="background:tomato;color:#fff;margin-top:0px;border-radius:15px">
+                                ${order.foodName}
+                                </h6>
+                                <div class="info" style="background:#0008;border-radius:15px;color:#fff;margin-top:10px">
+                                    <article style="text-align:left;padding:5px;">
+                                    Price per unit: ${order.foodPrice}
+                                    </article>
+
+                                    <article style="text-align:left;padding:5px">
+                                    Quantity ordered: ${order.quantity}
+                                    </article>
+
+                                    <article style="text-align:left;padding:5px">
+                                    Total bill: ${order.totalBill}
+                                    </article>
+
+                                    <article style="text-align:left;padding:5px">
+                                    Delivery Location: ${order.deliveryLocation}
+                                    </article>
+
+                                    <article style="text-align:left;padding:5px">
+                                    Day and Time: ${order.datetime} 
+                                    </article>
+                                </div>
+                                </li>
+                                `)
+                            
+                            });
+                            
+                        }else{
+                            alert('oops! Nothing to display')
+                        }
+                    },
+                    method:"GET"
+                })
+                $('.all-orders').addClass('show-item');
+             });//end of food ordered
+             //close orders
+             $('.allorders-cancel').on('click',function(){ 
+                $('.all-orders').removeClass('show-item');
+                $('.allorders').remove();
+             })
+            
+                        // All food
+                        $('#all-food').on('click',function(){
+                $('#allfood-topheader').addClass('show-my-food-header');
+                $('.create-food' ).removeClass('show-item');
+                $('.food-by-me').removeClass('show-item');
+                $('.all-foodlist').remove();
+                $('.create-food' ).removeClass('show-item');
+                $('.all-users').removeClass('show-item');
+                $('.all-userslist').remove();
+                $('.allorders').remove();
+                $('.all-orders').removeClass('show-item');
+               
+               
+               
+                $.ajax({
+                    url:`http://localhost:3000/foods`,
+                    success:function(result){
+                        if(result.length){
+                            // const [data]=result;
+                            console.log(result)  
+                            result.forEach(food=>{
+                                //name = food.fname.toUpperCase()
+                                $('.all-food').append(`
+                            <li class="all-foodlist" style="margin-bottom:8px;list-style:none;margin-top:70px" data-id=${food.id}>
+                            <h6 style="background:tomato;color:#fff;margin-top:0px;border-radius:15px">${food.fname.toUpperCase()}</h6>
+                            <img src=${food.imgUrl}>
+                            <div class="info" style="background:#0008;border-radius:15px;color:#fff;margin-top:10px">
+                            <article style="text-align:left;padding:5px;">
+                            Ingredient: ${food.ingredient}
+                            </article>
+                            <article style="text-align:left;padding:5px">
+                            Price: ${food.price}
+                            </article>
+                            <article style="text-align:left;padding:5px">
+                            Delivery Location(s): ${food.flocation}
+                            </article>
+                            <article style="text-align:left;padding:5px">
+                            Origin: ${food.origin}
+                            </article>
+                            <article class="allfood-button" style="text-align:left;padding:5px">
+                            <p class="bg-info order" data-id=${food.id} data-toggle="modal" data-target="#foodorderModal">Order</p>
+                            </article>
+                            </div>
+                            </li>
+                            `)
+                            })
+                            //  All food buttons functions
+                //Delete button
+                $('.delete').on('click',function(e){
+               // alert(e.target.dataset.id)
+               if(confirm(`Confirm ${e.target.dataset.foodname.toUpperCase()} delete action`)){
+                $.ajax({
+                   url:"http://localhost:3000/foods/"+e.target.dataset.id,
+                   success:function(res){
+                       const [afood] = res;
+                       alert(afood.creatoremail)
+                   },
+                   method:"DELETE"
+               })
+               }
+            })   
+            
+                    //edit button        
+            $('.edit').on('click',function(e){
+                $('.all-food').removeClass('show-item');
+                $('.all-foodlist').remove();
+
+                //get a particular food and populate update form
+                $.ajax({
+                    url:`http://localhost:3000/foods?id=${e.target.dataset.id}`,
+                    success:function(result){
+                        const [data] = result;
+                        $('#foodName').val(data.fname);
+                        $('#foodDelocation').val(data.flocation);
+                        $('#foodIngredient').val(data.ingredient);
+                        $('#foodOrigin').val(data.origin);
+                        $('#foodImg').val(data.imgUrl);
+                        $('#foodPrice').val(data.price);
+                        
+                    },
+                    method:"GET"
+                })//end of get call
+
+                //handle update button click
+            $('.update').on('click',function(){
+                let fname = $('#foodName').val();
+                let origin = $('#foodOrigin').val();
+                let ingredient = $('#foodIngredient').val();
+                let price = $('#foodPrice').val();
+                let flocation = $('#foodDelocation').val();
+                let imgUrl = $('#foodImg').val();
+                let creatoremail = sessionStorage.user_email;
+
+            // POST DATA TO FOODS TABLE USING AJAX
+            $.ajax({
+                url:`http://localhost:3000/foods/${e.target.dataset.id}`,
+                success:function(response){
+
+                },
+                data:{
+                fname,
+                origin,
+                ingredient,
+                price,
+                flocation,
+                imgUrl,
+                creatoremail
+                },
+                method:"PUT"
+            })
+            })
+
+            })
+                
+            
+            
+                //order button
+            $('.order').on('click',function(e){
+                //alert(e.target.dataset.id)
+                let foodName;
+                let foodPrice;
+                let totalBill;
+                let datetime = new Date();
+                $.ajax({
+                    url:`http://localhost:3000/foods?id=${e.target.dataset.id}`,
+                    success:function(response){
+                        const [singlefood] = response;
+                       foodName = singlefood.fname;
+                       foodPrice = singlefood.price;
+                    },
+                    method:"GET"
+                })
+
+                $('.placeOrder').on('click',function(){
+
+                    let userMail = sessionStorage.user_email;
+                    let deliveryLocation = $('#deliveryLocation').val();
+                    let quantity = $('#quantity').val();
+
+                    if(deliveryLocation !=="" || quantity >=1){
+                        
+                        totalBill = parseInt(foodPrice)*quantity;
+                    
+                    $.ajax({
+                        url:`http://localhost:3000/orders`,
+                        success:function(data){
+
+                        },
+                        data:{
+                            foodName,
+                            foodPrice,
+                            totalBill,
+                            quantity,
+                            deliveryLocation,
+                            userMail,
+                            datetime
+                            
+                        },
+                        method:"POST"
+                    })
+                    
+                    }else{
+
+                        alert("Could not capture order")
+                    }
+                    
+                })
+                $('#deliveryLocation').val("");
+                    $('#quantity').val("");
+
+            }) 
+                        
+            //single food view
+            $('.all-foodlist').on('click',function(e){
+                // alert('hi')
+                $('.singlefood').addClass('show-item')
+            })  
+
+
+            // single food mouseout
+            $('.singlefood').on('mouseout',function(){
+                $('.singlefood').removeClass('show-item')
+            }) 
+        }else{
+                            alert('oops')
+                        }
+                    },
+                    method:"GET"
+                })
+                $('.all-food').addClass('show-item');
+             });//end of All food
+
+             //close all food 
+             $('.allfood-cancel').on('click',function(){
+                $('.all-food').removeClass('show-item');
+                $('.all-foodlist').remove();
+             });
+
+            
+
+            //  all users view
+            $('#view-users').on('click',function(){
+                
+                // alert('hmm')
+                $('#allusers-topheader').addClass('show-my-food-header');
+                $('.create-food' ).removeClass('show-item');
+                $('.food-by-me').removeClass('show-item');
+                $('.all-userslist').remove();
+                $('.create-food' ).removeClass('show-item');
+                $('.all-food').removeClass('show-item');
+                $('.all-foodlist').remove();
+                $('.allorders').remove();
+                $('.all-orders').removeClass('show-item');
+               
+                $.ajax({
+                    url:"http://localhost:3000/users",
+                    success:function(users){
+                        if(users.length){
+                          // alert('on track')
+                     
+                           users.forEach(user=>{
+                            $('.all-users').append(`
+                            <li class="all-userslist" style="margin-bottom:8px;list-style:none;margin-top:70px">
+                            <h6 style="background:tomato;color:#fff;margin-top:0px;border-radius:15px">
+                            ${user.fname.toUpperCase()} ${user.lname.toUpperCase()}</h6>
+                            <img src="">
+                            <div class="info" style="background:#0008;border-radius:15px;color:#fff;margin-top:10px">
+                            <article style="text-align:left;padding:5px;">
+                            Address: ${user.ulocation}
+                            </article>
+                            <article style="text-align:left;padding:5px">
+                            Phone: ${user.uphone}
+                            </article>
+                            <article style="text-align:left;padding:5px">
+                            Email Address: ${user.uemail}
+                            </article>
+                            
+                            </div>
+                            
+                            </li>
+                            `)
+                           })
+                           
+                          
+                        }
+                    },
+                    method:"GET"
+                })//end of ajax get request to users table
+                $('.all-users').addClass('show-item');
+            })//end of click listener on all users button
+
+            // close all users view
+            $('.allusers-cancel').on('click',function(){
+                $('.all-users').removeClass('show-item');
+                $('.all-userslist').remove();
+             })
+            }
+        });
+        </script>    
 </body>
 </html>

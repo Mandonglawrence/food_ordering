@@ -41,7 +41,7 @@ header{
     <!-- <div class="cover"></div> -->
 <header>
     <h2> Food Bay </h2>
-       ;
+    
 </header>
 <div class="flash"></div>
     <!-- Registration form -->
@@ -70,34 +70,34 @@ header{
     <script src="../scripts/bootstrap.min.js"></script>
     <script>
     $(document).ready(function(){
-      
-      $('.join').on('click',function(e){
-          e.preventDefault();
-         console.log('hi')
+        
+        $('.join').on('click',function(e){
+        e.preventDefault();
+        console.log('hi')
         const fname = $('#fname').val().toLowerCase();
-      const lname = $('#lname').val().toLowerCase();
-      const uemail =$('#uemail').val().toLowerCase();
-      const ulocation = $('#ulocation').val();
-      const uphone = $('#uphone').val().toLowerCase();
-      const upass = $('#upass').val().toLowerCase();
-      const ucpass = $('#ucpass').val().toLowerCase();
-      if(upass === ucpass && upass!=="" && ucpass!==""){
-          if(uemail !== ""){
+            const lname = $('#lname').val().toLowerCase();
+            const uemail =$('#uemail').val().toLowerCase();
+            const ulocation = $('#ulocation').val();
+            const uphone = $('#uphone').val().toLowerCase();
+            const upass = $('#upass').val();
+            const ucpass = $('#ucpass').val();
+            if(upass === ucpass && upass!=="" && ucpass!==""){
+            if(uemail !== ""){
 
-          
-          $.ajax({
-                     url:"http://localhost:3000/users?uemail="+uemail,
-                     success:function(result){
-                         if(result.length){
+            
+            $.ajax({
+            url:"http://localhost:3000/users?uemail="+uemail,
+                success:function(result){
+                        if(result.length){
                             $("header").append(`<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%">
                                     User already exist. Please choose a different email and try again.
                                     <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                     <span aria-hidden="true">&times</span>
                                     </button>
                                     </div>
-                              `)
+                            `)
                           // return  alert("user already exist");
-                         }else{
+                        }else{
                             $.ajax({
                     url:"http://localhost:3000/users",success:function(result){console.log(result)},
                     method:"POST",
@@ -111,18 +111,18 @@ header{
                         "isAdmin":"false"
                     },
                 });
-                   window.location ='../index.html';    
-                   $("header").append(`<div class="alert alert-success alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%;margin-top:0;">
+                window.location ='../index.html';    
+                $("header").append(`<div class="alert alert-success alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%;margin-top:0;">
                                     Profile created successfully!
                                     <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                     <span aria-hidden="true">&times</span>
                                     </button>
                                     </div>
-                              `)
-                     }
-                     },
-                     method:"GET"
-                 });
+                            `)
+                    }
+                    },
+        method:"GET"
+                });
                 }else if(uemail==="" || ulocation==="" || fname==="" || lname==="" === "" || uphone==="" || upass==="" || ucpass===""){
                     $("header").append(`<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%;margin-top:0;">
                                     Form field(s) cannot be empty.
@@ -130,29 +130,29 @@ header{
                                     <span aria-hidden="true">&times</span>
                                     </button>
                                     </div>
-                              `)
+                            `)
                    // alert('Email cannot be empty')
                 }
-      }else{
-          if(upass==="" || ucpass===""){
+    }else{
+            if(upass==="" || ucpass===""){
             $("header").append(`<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%">
                                     Form field(s) cannot be empty.
                                     <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                     <span aria-hidden="true">&times</span>
                                     </button>
                                     </div>
-                              `)
-          }else{
+                            `)
+            }else{
         $("header").append(`<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:30%;margin-left:35%">
                                     Password mismatched!.
                                     <button type="button" class="close" data-dismiss="alert" aria-label="close">
                                     <span aria-hidden="true">&times</span>
                                     </button>
                                     </div>
-                              `)
+                    `)
                             }
-      }
-      })
+        }
+        })
     })
     </script>
 </body>
