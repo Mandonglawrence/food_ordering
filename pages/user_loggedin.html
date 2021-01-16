@@ -113,6 +113,7 @@ text-align: left;
     color: black;
     margin: 6px 0 6px 0;
     width:300px;
+    height:500px;
     text-align: center;
     border-radius: 10px;
     margin-left:10px;
@@ -195,6 +196,7 @@ cursor: pointer;
     color: black;
     margin: 6px 0 6px 0;
     width:300px;
+    height:500px;
     text-align: center;
     border-radius: 10px;
     margin-left:10px;
@@ -273,6 +275,7 @@ cursor: pointer;
     color: black;
     margin: 6px 0 6px 0;
     width:300px;
+    height:450px;
     text-align: center;
     border-radius: 10px;
     margin-left:10px;
@@ -311,16 +314,16 @@ height:50px;
     margin-right: 4em;
 }
 .singlefood{
-    margin-top:70px;
-        background:#000;
+    margin-top:80px;
+        background:rgb(255, 255, 255);
         /* margin-left: 180px; */
         margin-left:-250% ;
-        position: absolute;
+        position: fixed;
         /* width: auto; */
-        width: 840px;
+        width: 750px;
         /* width: auto; */
         /* display: none; */
-        height: 900px;
+        height: 600px;
         padding:15px;
         color: #fff;
         border-radius: 10px 10px 10px 10px;
@@ -360,10 +363,32 @@ height:50px;
     padding-top: 0.8em;
     margin-right: 4em;
 }
+
     .show-item{
     margin-left: 180px;
     display: block;
     transition: all 0.3s ease-in-out;
+}
+#singlefood{
+    margin-top: 70px;
+}
+.single{
+    cursor: pointer;
+}
+.p1 img{
+    width: 400px;
+    height: 300px;
+    border-radius: 12px;
+    border: 6px solid rgb(61, 61, 219);
+}
+.p1 p{
+    color: rgb(8, 8, 8);
+    /* display: inline; */
+}
+.p2{
+    background: rgb(63, 58, 58);
+    border-radius: 15px;
+    padding: 12px 0 12px 12px;
 }
     </style>
 </head>
@@ -459,7 +484,7 @@ height:50px;
                       <!-- single food  view -->
                 <div class="singlefood">
                         <div id="singlefood-topheader">
-                            <p>My Order History</p>
+                            <p class="para"></p>
                              <h6 class="singlefood-cancel">
                                 <i class="fa fa-times-circle" style="padding-right: 5px;"></i>
                                 Close
@@ -487,9 +512,15 @@ height:50px;
                                     <input type="text" id="foodName" class="form-control">
                                     <label for=""> Restaurant Name:</label>
                                     <input type="text" id="restName" class="form-control">
+
+                                    <label for=""> Restaurant Address:</label>
+                                    <input type="text" id="restAddress" class="form-control">
     
                                     <label for=""> Food Delivery Location:</label>
                                         <input type="text" id="foodDelocation" class="form-control">
+
+                                        <label for="">Delivery time scope:</label>
+                                  <input type="text" id="timeScope" class="form-control" required> 
     
                                         <label for=""> Food Ingredients:</label>
                                         <input type="text" id="foodIngredient" class="form-control">
@@ -575,6 +606,8 @@ height:50px;
                 $('.all-userslist').remove();
                 $('.allorders').remove();
                 $('.all-orders').removeClass('show-item');
+                $('#singlefood').remove();
+                $('.singlefood').removeClass('show-item')
                
                
             })
@@ -694,6 +727,8 @@ height:50px;
                 $('.all-userslist').remove();
                 $('.allorders').remove();
                 $('.all-orders').removeClass('show-item');
+                $('#singlefood').remove();
+                $('.singlefood').removeClass('show-item');
                
                
                
@@ -765,6 +800,9 @@ height:50px;
                         $('#foodOrigin').val(data.origin);
                         $('#foodImg').val(data.imgUrl);
                         $('#foodPrice').val(data.price);
+                        $('#restName').val(data.restname);
+                        $('#restAddress').val(data.restaddress);
+                        $('#timeScope').val(data.timescope);
                         
                     },
                     method:"GET"
@@ -773,11 +811,14 @@ height:50px;
                 //handle update button click
             $('.update').on('click',function(){
                 let fname = $('#foodName').val();
+                let restname = $('#restName').val();
                 let origin = $('#foodOrigin').val();
                 let ingredient = $('#foodIngredient').val();
                 let price = $('#foodPrice').val();
                 let flocation = $('#foodDelocation').val();
+                let restaddress = $('#restAddress').val();
                 let imgUrl = $('#foodImg').val();
+                let timescope = $('#timeScope').val();
                 let creatoremail = sessionStorage.user_email;
 
                 if(fname!=="" && origin !=="" && ingredient!=="" && price !== "" && flocation !== "" && imgUrl !==""){
@@ -789,10 +830,13 @@ height:50px;
                 },
                 data:{
                 fname,
+                restname,
                 origin,
                 ingredient,
                 price,
                 flocation,
+                restaddress,
+                timescope,
                 imgUrl,
                 creatoremail
                 },
@@ -891,7 +935,8 @@ height:50px;
                 $('.all-users').removeClass('show-item');
                 $('.all-userslist').remove();
                 $('.food-by-me').removeClass('show-item');
-                
+                $('#singlefood').remove();
+                $('.singlefood').removeClass('show-item');
                
                 $.ajax({
                     url:`http://localhost:3000/orders?userMail=`+sessionStorage.user_email,
@@ -917,7 +962,7 @@ height:50px;
                                     </article>
 
                                     <article style="text-align:left;padding:5px">
-                                    Total bill: ${order.totalBill}
+                                    Total bill:NGN ${order.totalBill}
                                     </article>
 
                                     <article style="text-align:left;padding:5px">
@@ -958,6 +1003,8 @@ height:50px;
                 $('.all-userslist').remove();
                 $('.allorders').remove();
                 $('.all-orders').removeClass('show-item');
+                $('#singlefood').remove();
+                $('.singlefood').removeClass('show-item');
                
                
                
@@ -970,20 +1017,20 @@ height:50px;
                             result.forEach(food=>{
                                 //name = food.fname.toUpperCase()
                                 $('.all-food').append(`
-                            <li class="all-foodlist" style="margin-bottom:8px;list-style:none;margin-top:70px" data-id=${food.id}>
-                            <h6 style="background:tomato;color:#fff;margin-top:0px;border-radius:15px">${food.fname.toUpperCase()}</h6>
-                            <img src=${food.imgUrl}>
+                            <li class="all-foodlist" style="margin-bottom:8px;list-style:none;margin-top:70px">
+                            <h6 data-id=${food.id} class="single" style="background:tomato;color:#fff;margin-top:0px;border-radius:15px">${food.fname.toUpperCase()}</h6>
+                            <img data-id=${food.id} class="single" src=${food.imgUrl}>
                             <div class="info" style="background:#0008;border-radius:15px;color:#fff;margin-top:10px">
-                            <article style="text-align:left;padding:5px;">
+                            <article data-id=${food.id} class="single" style="text-align:left;padding:5px;">
                             Ingredient: ${food.ingredient}
                             </article>
-                            <article style="text-align:left;padding:5px">
+                            <article data-id=${food.id} class="single" style="text-align:left;padding:5px">
                             Price: ${food.price}
                             </article>
-                            <article style="text-align:left;padding:5px">
+                            <article data-id=${food.id} class="single" tyle="text-align:left;padding:5px">
                             Delivery Location(s): ${food.flocation}
                             </article>
-                            <article style="text-align:left;padding:5px">
+                            <article data-id=${food.id} class="single" style="text-align:left;padding:5px">
                             Origin: ${food.origin}
                             </article>
                             <article class="allfood-button" style="text-align:left;padding:5px">
@@ -1120,14 +1167,53 @@ height:50px;
             }) 
                         
             //single food view
-            $('.all-foodlist').on('click',function(e){
-                // alert('hi')
-                $('.singlefood').addClass('show-item')
+            $('.single').on('click',function(e){
+                // alert(e.target.dataset.id)
+                $('#singlefood').remove();
+                $('.singlefood').addClass('show-item');
+                $.ajax({
+                    url:"http://localhost:3000/foods?id="+e.target.dataset.id,
+                    success:function(result){
+                        if(result.length){
+                            const [singfood] = result;
+                            // alert(singfood.fname) 
+                            $('.para').html(singfood.fname)
+                            $('.singlefood').append(`
+                            <div id="singlefood">
+                            <div class="p1">
+                            <img src=${singfood.imgUrl}>
+                            <p>Ingredient  : ${singfood.ingredient}</p>
+                            </div>
+                            <div class="p2">
+                            <article>Price :NGN ${singfood.price}</article>
+                            <article>
+                            Delivery area(s): ${singfood.flocation}
+                            </article>
+                            <article>
+                            Vendor: ${singfood.restname}
+                            </article>
+
+                            <article>
+                            Vendor's address: ${singfood.restaddress}
+                            </article>
+                            <article>
+                            Delivery Time coverage: ${singfood.timescope}
+                            </article>
+                            </div>
+
+                            </div>
+                            
+                            `)
+                        }
+                    },
+                    method:"GET"
+                })
             })  
 
 
             // single food mouseout
-            $('.singlefood').on('mouseout',function(){
+            $('.singlefood-cancel').on('click',function(){
+                $('#singlefood').remove();
                 $('.singlefood').removeClass('show-item')
             }) 
         }else{
