@@ -130,6 +130,26 @@
       "upass": "1990",
       "isAdmin": "false",
       "id": 13
+    },
+    {
+      "fname": "Mary",
+      "lname": "Johnson",
+      "uemail": "mary@gmail.com",
+      "ulocation": "No.46 ojo street",
+      "uphone": "080666722828",
+      "upass": "mary",
+      "isAdmin": "false",
+      "id": 14
+    },
+    {
+      "fname": "John",
+      "lname": "Musa",
+      "uemail": "musa@gmail.com",
+      "ulocation": "25 Adesola Street, VI, Lagos",
+      "uphone": "08067526263",
+      "upass": "musa",
+      "isAdmin": "false",
+      "id": 15
     }
   ],
   "foods": [
@@ -261,6 +281,58 @@
       "creatoremail": "ruthjanetsule@gmail.com",
       "imgUrl": "../images/fufu.png",
       "id": 17
+    },
+    {
+      "fname": "Itatlian Salad",
+      "restname": "Quincy Foods",
+      "origin": "Italian",
+      "ingredient": "Cabbage, lettuce,green beans",
+      "price": "800",
+      "flocation": "VI, Lagos ",
+      "restaddress": "No.34 lekki lake VI Lagos",
+      "timescope": "45-60 minutes",
+      "imgUrl": "../images/",
+      "creatoremail": "ruthjanetsule@gmail.com",
+      "id": 18
+    },
+    {
+      "fname": "Okpa",
+      "restname": "Edu joint",
+      "origin": "Nigerian",
+      "ingredient": "Fermented casava",
+      "price": "3000",
+      "flocation": "South-Eastern states and Lagos.",
+      "restaddress": "no.8 zik srt",
+      "timescope": "30-45 minutes",
+      "imgUrl": "../images/fufu.png",
+      "creatoremail": "mary@gmail.com",
+      "id": 19
+    },
+    {
+      "fname": "beans",
+      "restname": "hshkss",
+      "origin": "dfff",
+      "ingredient": "dddd",
+      "price": "78",
+      "flocation": "hgggkkj",
+      "restaddress": "ssssssss",
+      "timescope": "45",
+      "creatoremail": "musa@gmail.com",
+      "imgUrl": "jkhjh",
+      "id": 20
+    },
+    {
+      "fname": "MIYAN KARKASHI",
+      "restname": "MAMA WILLI ",
+      "origin": "NIGERIAN",
+      "ingredient": "OIL,PEPPER,SALT,MAGGI",
+      "price": "1500",
+      "flocation": "PORTHERCOURT,ENUGU,ANAMBRA.",
+      "restaddress": "N0  5 REYFIELD ROAD,JOS",
+      "timescope": "30-40 MINUTES",
+      "imgUrl": "DFG",
+      "creatoremail": "isaactongreat@gmail.com",
+      "id": 21
     }
   ],
   "orders": [
@@ -481,6 +553,106 @@
       "userMail": "gini@gmail.com",
       "datetime": "Thu Oct 24 2019 03:15:48 GMT+0100 (West Africa Standard Time)",
       "id": 23
+    },
+    {
+      "foodName": "egusi soup",
+      "foodPrice": "200",
+      "totalBill": "200",
+      "quantity": "1",
+      "deliveryLocation": "Campus Three",
+      "userMail": "ruthjanetsule@gmail.com",
+      "datetime": "Sat Oct 26 2019 01:37:00 GMT+0100 (West Africa Standard Time)",
+      "id": 24
+    },
+    {
+      "foodName": "egusi soup",
+      "foodPrice": "200",
+      "totalBill": "200",
+      "quantity": "1",
+      "deliveryLocation": "Campus Three",
+      "userMail": "ruthjanetsule@gmail.com",
+      "datetime": "Sat Oct 26 2019 01:37:21 GMT+0100 (West Africa Standard Time)",
+      "id": 25
+    },
+    {
+      "foodName": "Cocoa swallow",
+      "foodPrice": "10000",
+      "totalBill": "30000",
+      "quantity": "3",
+      "deliveryLocation": "Kano street coal camp",
+      "userMail": "ruthjanetsule@gmail.com",
+      "datetime": "Sat Oct 26 2019 01:38:33 GMT+0100 (West Africa Standard Time)",
+      "id": 26
+    },
+    {
+      "foodName": "Itatlian Salad",
+      "foodPrice": "800",
+      "totalBill": "1600",
+      "quantity": "2",
+      "deliveryLocation": "No 38 lekki phase 2",
+      "userMail": "ruthjanetsule@gmail.com",
+      "datetime": "Sat Oct 26 2019 02:28:36 GMT+0100 (West Africa Standard Time)",
+      "id": 27
+    },
+    {
+      "foodName": "Cocoa swallow",
+      "foodPrice": "10000",
+      "totalBill": "60000",
+      "quantity": "6",
+      "deliveryLocation": "Campus Three",
+      "userMail": "mary@gmail.com",
+      "datetime": "Sat Oct 26 2019 02:32:53 GMT+0100 (West Africa Standard Time)",
+      "id": 28
+    },
+    {
+      "foodName": "Okpa",
+      "foodPrice": "3000",
+      "totalBill": "6000",
+      "quantity": "2",
+      "deliveryLocation": "No 38 lekki phase 2",
+      "userMail": "mary@gmail.com",
+      "datetime": "Sat Oct 26 2019 03:20:57 GMT+0100 (West Africa Standard Time)",
+      "id": 29
+    },
+    {
+      "foodName": "beans",
+      "foodPrice": "78",
+      "totalBill": "234",
+      "quantity": "3",
+      "deliveryLocation": "erereter",
+      "userMail": "musa@gmail.com",
+      "datetime": "Sat Oct 26 2019 15:07:04 GMT+0100 (West Africa Standard Time)",
+      "id": 30
+    },
+    {
+      "foodName": "Cocoa swallow",
+      "foodPrice": "10000",
+      "totalBill": "20000",
+      "quantity": "2",
+      "deliveryLocation": "ibb gateway",
+      "userMail": "isaactongreat@gmail.com",
+      "datetime": "Sun Nov 03 2019 22:06:07 GMT+0100 (West Africa Standard Time)",
+      "id": 31
+    },
+    {
+      "foodName": "Cocoa swallow",
+      "foodPrice": "10000",
+      "totalBill": "20000",
+      "quantity": "2",
+      "deliveryLocation": "ibb gateway",
+      "userMail": "isaactongreat@gmail.com",
+      "datetime": "Sun Nov 03 2019 22:06:17 GMT+0100 (West Africa Standard Time)",
+      "id": 32
+    },
+    {
+      "foodName": "Okpa",
+      "foodPrice": "3000",
+      "totalBill": "30000",
+      "quantity": "10",
+      "deliveryLocation": "jos",
+      "userMail": "isaactongreat@gmail.com",
+      "datetime": "Sun Nov 03 2019 22:17:54 GMT+0100 (West Africa Standard Time)",
+      "id": 33
     }
   ]
 }
