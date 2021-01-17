@@ -333,6 +333,19 @@
       "imgUrl": "DFG",
       "creatoremail": "isaactongreat@gmail.com",
       "id": 21
+    },
+    {
+      "fname": "Shawarma",
+      "restname": "Mary's Special",
+      "origin": "Nigerian",
+      "ingredient": "Flour, chicken, water, vegetable oil",
+      "price": "1500",
+      "flocation": "Lagos state",
+      "restaddress": "23 Ogundele Street, 7 and 8, Iyano Isolo, Lagos state.",
+      "timescope": "Lagos state",
+      "imgUrl": "no",
+      "creatoremail": "lukejay@gmail.com",
+      "id": 22
     }
   ],
   "orders": [
