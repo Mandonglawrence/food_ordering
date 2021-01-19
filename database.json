@@ -666,6 +666,26 @@
       "userMail": "isaactongreat@gmail.com",
       "datetime": "Sun Nov 03 2019 22:17:54 GMT+0100 (West Africa Standard Time)",
       "id": 33
+    },
+    {
+      "foodName": "Shawarma",
+      "foodPrice": "1500",
+      "totalBill": "4500",
+      "quantity": "3",
+      "deliveryLocation": "Lagos",
+      "userMail": "lukejay@gmail.com",
+      "datetime": "Sun Jan 17 2021 13:27:31 GMT+0100 (West Africa Standard Time)",
+      "id": 34
+    },
+    {
+      "foodName": "Cocoa swallow",
+      "foodPrice": "10000",
+      "totalBill": "30000",
+      "quantity": "3",
+      "deliveryLocation": "Lagos",
+      "userMail": "lukejay@gmail.com",
+      "datetime": "Sun Jan 17 2021 13:28:16 GMT+0100 (West Africa Standard Time)",
+      "id": 35
     }
   ]
 }
